@@ -50,11 +50,9 @@ width: 0;height: 0;font-size: 0;border: 18px solid transparent;border-left-color
 .buyCar .table-car .list .t1 img {width: 70px;height: 70px;padding: 8px 0;}
 .buyCar .table-car .list .td2 .selectPresent{width: 60px;float: right;
 margin-top: 0px;}
-.buyCar .table-car .list .num {border: 1px solid #cacbcb;width: 81px;
+.buyCar .table-car .list .number {border: 1px solid #cacbcb;width: 81px;
 height: 19px;margin: 0 auto;overflow: hidden;}
-.buyCar .table-car .list .num i {cursor: pointer;background: url(../images/addSub.png);width: 18px;height: 19px;display: inline-block;vertical-align: top;}
-.buyCar .table-car .list .num input {vertical-align: top;border: 0 none;width: 43px;height: 19px;line-height: 19px;text-align: center;border-right: 1px solid #cacbcb;border-left: 1px solid #cacbcb;}
-.buyCar .table-car .list .num i.sub {background-position: -18px;}
+
 .buyCar .table-car .conclusion {color: #333;text-align: right;padding: 20px;border-bottom: 1px dotted #ccc;line-height: 30px;}
 .buyCar .table-car .conclusion em {margin-left: 80px;}
 .buyCar .table-car .all {border-bottom: 0 none;font-weight: bold;}

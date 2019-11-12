@@ -70,6 +70,29 @@ z-index: 99;}
 background: url(../images/pageB.png) 0 0 no-repeat;}
 .product .rightCon .orderBy .pageB span {float: left;padding: 0 8px;}
 .product .rightCon .orderBy .pageB .nextpage {background-position: -41px;}
+.product .rightCon form{margin: 0;}
+.product .rightCon form .proList{display: block;}
+.rightCon .list li {padding: 25px 0;border-bottom: 1px solid #ccc;overflow: hidden;}
+.rightCon .list .li-img {height: 185px;width: 190px;border: 1px solid #ccc;position: relative;padding: 30px 20px 30px 20px;}
+.rightCon .list .li-img img{width: 186px;height: 186px;}
+.icon1111 {display: none;position: absolute;width: 230px;height: 246px;margin-left: -231px;}
+.rightCon .list .li-con {margin-left: 26px;width: 660px;}
+.rightCon .list .li-con h2 a {color: #333;font-size: 14px;line-height: 34px;}
+.rightCon .li-con dt div {overflow: hidden;line-height: 20px;margin-top: 3px;}
+.rightCon #search_list .li-con dt div {margin-top: 4px;}
+.rightCon .li-con dt div {line-height: 20px;}
+.memberPrice{color: red;}
+.rightCon .li-con .line_2 p {float: left;}
+.review_d {margin: 0 8px;}
+.review_d span {height: 17px;line-height: 17px;}
+.review_d i {margin-right: 2px;display: inline-block;vertical-align: text-bottom;width: 13px;height: 12px;background: url(../images/star2.png);}
+.rightCon .li-con .line_3 span {margin-right: 24px;}
+.rightCon .li-con .line_4{overflow: hidden;height: 60px;}
+.rightCon #search_list .li-con dd {margin-top: 20px;}
+.rightCon .li-con dd a {width: 104px;height: 34px;line-height: 34px;padding-left: 30px;
+border-radius: 3px;font-size: 14px;display: inline-block;text-align: center;}
+.rightCon .li-con dd .b_1 {background: #e62129 url(../images/cart_ico.png) 17px center no-repeat;color: #fff!important;border: 1px solid #e62129;}
+.rightCon .li-con dd .b_2 {background: #fff url(../images/shc_ico.png) 17px center no-repeat;color: #a3a3a3;border: 1px solid #a3a3a3;}
 
 
 /* 基本介绍 */

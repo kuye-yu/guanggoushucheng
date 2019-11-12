@@ -2,7 +2,9 @@ class List{
     constructor(options){
         this.dom = options.dom;
         this.url = options.url;
+        // 发送请求
         this.load();
+        // 绑定事件委托
         this.addEvent();
     }
     load(){
@@ -15,9 +17,9 @@ class List{
     display(){
         var str = "";
         for(var i = 0; i < this.res.length; i++){
-            str += `<li class='bookli'>
+            str += `<li class='bookli' index="${this.res[i].id}">
                         <div class="li-img fl">
-                            <a href="shopping.html" target="_blank">
+                            <a href="details.html" target="_blank">
                                 <img id="imgbox_6526395" src="${this.res[i].img}" alt="暂无图片" title="${this.res[i].name}"/>
                             </a>
                         </div>
@@ -25,7 +27,7 @@ class List{
                         <div class="li-con fl" index="${this.res[i].id}">
                             <h2>
                                 <img class="icon1111" src="${this.res[i].img}" /> 
-                                <a href="/Product.do?id=6526395" title="${this.res[i].name}" target="_blank">
+                                <a href="details.html" title="${this.res[i].name}" target="_blank">
                                     <strong> ${this.res[i].name}）</strong>
                                 </a>
                             </h2>
@@ -52,7 +54,7 @@ class List{
                                     </div>
                                     <div class="line_3">
                                         <span>作者：
-                                            <em ><a href="/ProductList.do?Author=[英]${this.res[i].author}">${this.res[i].author}</a>
+                                            <em ><a href="details.html">${this.res[i].author}</a>
                                             </em>&nbsp;
                                             <em ><a href="/ProductList.do?Author=著;">
                                             著;</a>
@@ -83,38 +85,53 @@ class List{
     addEvent(){
         var that = this;
         this.dom.onclick = function(eve){
-            console.log(that.res);
-            if(eve.target.className == "b_1"){
-                that.id = eve.target.parentNode.parentNode.parentNode.getAttribute("index");
-                console.log(that.id);
-                that.setLocalStorage();
-            }
+            that.id = $(eve.target).parents(".bookli").attr("index");
+            that.setLocalStorage(eve);
         }
     }
-    setLocalStorage(){
-        this.goods = JSON.parse (localStorage.getItem("goods"))? JSON.parse (localStorage.getItem("goods")) : [];
-        if(this.goods.length == 0){
-            this.goods.push({
-                id:this.id,
-                num:1
-            })
-        }else{
-            var onoff = true;
-            for(var i = 0; i < this.goods.length; i++){
-                if(this.goods[i].id === this.id){
-                    this.goods[i].num++;
-                    onoff = false;
+    setLocalStorage(eve){
+        // 判定点击的是详情页还是购物车
+        if(eve.target.className == "b_1"){
+            this.goods = JSON.parse (localStorage.getItem("goods"))? JSON.parse (localStorage.getItem("goods")) : [];
+            if(this.goods.length == 0){
+                this.goods.push({
+                    id:this.id,
+                    num:1
+                })
+            }else{
+                var onoff = true;
+                for(var i = 0; i < this.goods.length; i++){
+                    if(this.goods[i].id === this.id){
+                        this.goods[i].num++;
+                        onoff = false;
+                    }
                 }
+            if(onoff){
+                this.goods.push({
+                    id:this.id,
+                    num:1
+                })
             }
-        if(onoff){
-            this.goods.push({
-                id:this.id,
-                num:1
-            })
-        }
         }
         localStorage.setItem("goods",JSON.stringify(this.goods));
- }
+        }
+        else{
+            this.details = JSON.parse(localStorage.getItem("details"))? JSON.parse(localStorage.getItem("details")) : [];
+            if(this.details.length == 0){
+                this.details.push({
+                    id:this.id,
+                })
+            }else{
+                for(var i = 0; i < this.details.length;i++){
+                    if(this.id != this.details[i].id){
+                        this.details[i].id = this.id;
+                        
+                    }
+                }
+            }
+            localStorage.setItem("details",JSON.stringify(this.details));
+        }
+    }
 }
 new List({
     dom:document.querySelector(".rightCon .proList ul.list"),

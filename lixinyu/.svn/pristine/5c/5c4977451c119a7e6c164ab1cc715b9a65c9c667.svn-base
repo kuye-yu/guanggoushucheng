@@ -18,13 +18,13 @@ class List{
             str += `<li class='bookli'>
                         <div class="li-img fl">
                             <a href="shopping.html" target="_blank">
-                                <img id="imgbox_6526395" src="${this.res[i].imgs}" alt="暂无图片" title="${this.res[i].name}"/>
+                                <img id="imgbox_6526395" src="${this.res[i].img}" alt="暂无图片" title="${this.res[i].name}"/>
                             </a>
                         </div>
-                        <img class="icon1111" src="${this.res[i].imgs}" />
-                        <div class="li-con fl">
+                        <img class="icon1111" src="${this.res[i].img}" />
+                        <div class="li-con fl" index="${this.res[i].id}">
                             <h2>
-                                <img class="icon1111" src="${this.res[i].imgs}" /> 
+                                <img class="icon1111" src="${this.res[i].img}" /> 
                                 <a href="/Product.do?id=6526395" title="${this.res[i].name}" target="_blank">
                                     <strong> ${this.res[i].name}）</strong>
                                 </a>
@@ -69,13 +69,13 @@ class List{
                                         </span>
                                     </div>
                                     <div class="line_4">${this.res[i].synopsis}</div>
-                                    </dt>
-                                    <dd>
-                                        <a class="b_1" href="javascript:;" onclick="_gaq.push(['_trackEvent', 'click','购买键', '搜索页>放购物车']);isGoToCart(6526395)">加入购物车</a>
-                                        <a href="javascript:;" class="b_2" onClick="addFavor(0,6526395);"> 放入收藏夹 </a>
-                                    </dd>
-                                </dl>
-                            </div>
+                                </dt>
+                                <dd>
+                                    <a class="b_1" href="javascript:;">加入购物车</a>
+                                    <a href="javascript:;" class="b_2" onClick="addFavor(0,6526395);"> 放入收藏夹 </a>
+                                </dd>
+                            </dl>
+                        </div>
                     </li>`;
         }
         this.dom.innerHTML = str;
@@ -83,14 +83,16 @@ class List{
     addEvent(){
         var that = this;
         this.dom.onclick = function(eve){
-            if(eve.target.className == "btn"){
-                that.id = eve.target.parentNode.getAttribute("index");
+            console.log(that.res);
+            if(eve.target.className == "b_1"){
+                that.id = eve.target.parentNode.parentNode.parentNode.getAttribute("index");
+                console.log(that.id);
                 that.setLocalStorage();
             }
         }
     }
     setLocalStorage(){
-        this.goods = localStorage.getItem("goods")? JSON.parse (localStorage.getItem("goods")) : [];
+        this.goods = JSON.parse (localStorage.getItem("goods"))? JSON.parse (localStorage.getItem("goods")) : [];
         if(this.goods.length == 0){
             this.goods.push({
                 id:this.id,
