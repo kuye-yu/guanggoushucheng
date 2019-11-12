@@ -1,0 +1,18 @@
+.login-top {padding: 30px 0;position: relative;color: #666;font-size: 16px;}
+.login-top a.iback {line-height: 30px;position: absolute;bottom: 0;right: 70px;font-size: 12px;color: #666;}
+.login-top img {margin-right: 34px;}
+.login-top span {display: inline-block;vertical-align: top;margin-top: 6px;padding-left: 25px;font-family: "Microsoft Yahei";font: 18px/44px "";color: #000;border-left: 1px solid #bbb;}
+
+.register {border: 1px solid #dedede;padding: 70px;}
+.register .pLeft {padding-left: 355px;}
+.register .pLeft .item {position: relative;line-height: 52px;}
+.register .pLeft .item span {position: absolute;top: 1px;left: 17px;font-size: 14px;color: #333;}
+.register em {color: #e62129;}
+.register .pLeft .item input[type=text], .register .pLeft .item input[type=password] { width: 270px;height: 50px;border: 1px solid #ddd;font-size: 14px;line-height: 52px;
+padding-left: 120px;padding-right: 10px;}
+.register .pLeft .item p {line-height: 42px;height: 42px;color: #bcbcbc;}
+.register .pLeft .item input[type=checkbox] {margin-right: 18px;}
+.register .pLeft .item a {color: #2a6ed3;}
+.register .pLeft .item input[type=button] {width: 402px;height: 52px;border: 0 none;font-size: 16px;background: #e62129;color: #fff;}
+.myfooter {text-align: center;margin: 20px 0px;}
+.myfooter .footer-t{text-align: center;margin: 15px 0 5px;}

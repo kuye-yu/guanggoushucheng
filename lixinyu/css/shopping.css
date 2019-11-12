@@ -1,0 +1,68 @@
+body{width: 100%;}
+/* 头部 */
+header {position: relative;z-index: 3;}
+/* 头部上部分 */
+header .top {height: 30px;line-height: 30px;background: #f1f1f1;color: #8e8e8e;}
+header .top .fl a {display: inline-block;}
+header .top .address {display: inline-block;padding-left: 25px;position: relative;vertical-align: top;}
+header .top .address .areamini {cursor: default;position: relative;z-index: 102;padding: 0 10px;height: 30px;}
+header .top .address span {color: #ed1d1d;padding-right: 17px;background: url(../images/addr-select-down.png) no-repeat right center;}
+header .top .address ul {display: none;position: absolute;top: 29px;left: 0;   z-index: 3;width: 300px;background: #fff;border: 1px solid #ddd;padding: 5px 10px;}
+header .top .address ul li {float: left;width: 60px;margin-bottom: 3px;}
+header .top .address ul li a {padding: 0 8px;vertical-align: middle;display: inline-block;}
+a.selected{color: #ed1d1d;}
+header .top .fr {cursor: default;}
+header .top .fr a {margin-right: 45px;}
+header .top .fr span { display: inline-block;}
+/* 头部下部分 */
+header .bottom {padding: 15px 0 15px;}
+.wrapper{width: 990px;margin: 0 auto;}
+header .bottom h1 {float: left;}
+header .bottom .search {margin-left: 310px;text-align: right;margin-top: 20px;}
+header .bottom .search form{margin: 0px;float: right;}
+header .bottom .search input[type="text"] {width: 398px;height: 32px;line-height: 32px;border: 2px solid #e62129;font-size: 18px;padding: 0 5px;float: left;}
+header .bottom .search input[type="submit"] {width: 72px;height: 36px;line-height: 32px;border: 0 none;background: #e62129 url(../images/ico-search.png) no-repeat center;cursor: Pointer;float: left;}
+
+/* 商品部分 */
+.buyCar a {color: #06c;}
+.buyCar .table-car {border: 1px solid #ddd; border-radius: 4px;}
+.buyCar .path {overflow: hidden;font-size: 14px;line-height: 35px;height: 35px;
+margin-bottom: 20px;}
+.buyCar .path ul li {position: relative;float: left;width: 330px;background: #efefef;text-align: center;color: #666;}
+.buyCar .path ul li.cur {background: #e62129;color: #fff;}
+.buyCar .path ul li span {margin-right: 5px;width: 30px;height: 25px;display: inline-block;vertical-align: middle;}
+.buyCar .path ul li.cur span {background-position: -30px;}
+.buyCar .path ul li i {z-index: 1;position: absolute;top: 0;left: 100%;
+width: 0;height: 0;font-size: 0;border: 18px solid transparent;border-left-color: #efefef;}
+.buyCar .path ul li.cur i {border-left-color: #e62129;}
+.buyCar .table-car {border: 1px solid #ddd;border-radius: 4px;}
+.buyCar .table-car table {width: 100%;}
+.buyCar .table-car .title {line-height: 49px;background: #f3f3f3;color: #666;}
+.buyCar .table-car .title tr th {width: 168px;}
+.buyCar .table-car .title .t2 {width: 336px;}
+.buyCar .table-car .full {line-height: 47px;padding: 0 10px;border-bottom: 1px dotted #ccc;}
+.buyCar .table-car .full img {margin: 0 10px 0 20px;}
+.buyCar .table-car .full span{color: #CC0000;}
+.buyCar .table-car .full a {color: #fff;font-weight: bold;width: 50px;height: 25px;border: 1px solid red;background: red;}
+.buyCar .table-car .list {line-height: 1.7;}
+.buyCar .table-car .list td {border-bottom: 1px solid #ddd;padding: 10px 0;text-align: center;width: 168px;}
+.buyCar .table-car .list .t1 label {display: block;text-align: center;}
+.buyCar .table-car .list .t1 img {width: 70px;height: 70px;padding: 8px 0;}
+.buyCar .table-car .list .td2 .selectPresent{width: 60px;float: right;
+margin-top: 0px;}
+.buyCar .table-car .list .num {border: 1px solid #cacbcb;width: 81px;
+height: 19px;margin: 0 auto;overflow: hidden;}
+.buyCar .table-car .list .num i {cursor: pointer;background: url(../images/addSub.png);width: 18px;height: 19px;display: inline-block;vertical-align: top;}
+.buyCar .table-car .list .num input {vertical-align: top;border: 0 none;width: 43px;height: 19px;line-height: 19px;text-align: center;border-right: 1px solid #cacbcb;border-left: 1px solid #cacbcb;}
+.buyCar .table-car .list .num i.sub {background-position: -18px;}
+.buyCar .table-car .conclusion {color: #333;text-align: right;padding: 20px;border-bottom: 1px dotted #ccc;line-height: 30px;}
+.buyCar .table-car .conclusion em {margin-left: 80px;}
+.buyCar .table-car .all {border-bottom: 0 none;font-weight: bold;}
+.buyCar .table-car .all span {font-family: "microsoft YaHei";font-size: 20px;color: #e62129;margin-left: 60px;}
+.buyCar .submit {font-family: "microsoft YaHei";font-size: 20px;padding: 30px 0;}
+.buyCar .submit a {border-radius: 5px;display: inline-block;color: #999;vertical-align: middle;width: 203px;height: 42px;line-height: 42px;text-align: center;border: 1px solid #ccc;}
+.buyCar .submit .fr {background: #e62129;color: #ffffff;font-family: '微软雅黑';font-size: 20px;}
+
+/* 尾部 */
+.myfooter {text-align: center;margin: 20px 0px;}
+.myfooter .footer-t{text-align: center;margin: 15px 0 5px;}

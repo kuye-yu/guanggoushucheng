@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/redister.css">
+</head>
+<body>
+    <div class="login-top container">
+        <a href="/" target="_blank"><img src="images/logo1.jpg"></a>
+        <span>欢迎注册广购书页！尽享多重优惠服务。</span>
+        <div class="fr">已有账号&nbsp;<a href="login.html">请登录</a></div>
+    </div>
+    <div class="container">
+        <div class="register">
+            <div class="pLeft">
+            
+                    <div class="item">
+                        <span><em>*</em>&nbsp;邮&nbsp;箱</span>
+                        <input type="text" id="Email" name="Email"> 
+                        <p class="emailMsg" id="emailMsg">邮箱为用户名，并用于密码找回，接收订单信息等用户</p>
+                    </div>
+                    <div class="item">
+                        <span><em>*</em>&nbsp;设置密码</span>
+                        <input type="password" name="password" id="redisterPass">
+                        <p class="pwdMsg" id="pwdMsg">您的密码可以由大小写英文字母、数字组成，长度6-16</p>
+                    </div>
+                    <div class="item">
+                        <span><em>*</em>&nbsp;确认密码</span>
+                        <input type="password" name="password2" id="password2">
+                        <p class="pwd1Msg" id="pwd1Msg">您输入的密码不一样，请重新输入！</p>
+                   </div>
+                    <div class="item">
+                        <span><em>*</em>&nbsp;手机号码</span>
+                        <input type="text" placeholder="建议使用常用手机" id="mobilePhone" name="mobilePhone">
+                        <p><em>温馨提示：</em>填写手机号码后将收到我们的促销短信、发货通知</p>
+                    </div>
+                   
+                    <div class="item">
+                        <label>
+                            <input type="checkbox" id="protocolCheckbox">&nbsp;&nbsp;
+                            <a target="_blank" href="#">我已阅读并同意《广购书业服务条款》
+                            </a>
+                        </label>
+                    </div>
+                    <div class="item">
+                        <input id="registerBtn" class="submit" type="button" value="立即注册">
+                    </div>
+               
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div id="myfooter" class="myfooter">
+            <!-- 友情链接-->
+            <div class="footer-t">友情链接：
+                <a href="#" target="_blank">广州新华出版发行集团</a>&nbsp;|
+                <a href="#" target="_blank">广州市新华书店集团有限公司&nbsp;</a>
+                <span>|&nbsp;</span>
+                <a href="#" target="_blank">广州出版社有限公司</a>
+                <span>&nbsp;|</span>
+                <a href="#" target="_blank">&nbsp;广州报刊亭有限公司</a>
+            </div>
+            <div class="footer-t">&nbsp;&nbsp;</div>
+            <div>
+                <a href="#">关于网站</a> | 
+                <a href="#">公司简介</a> | 
+                <a href="#">法律声明</a> | 
+                <a href="#">联系我们</a>
+            </div>
+            <div class="footer-t">广州购书中心有限公司 版权所有? 2010 经营许可证：粤B2-20040295 
+                <a href="#" target="_blank">粤ICP备10095868号</a>
+            </div>
+            <a href="#">
+                <img alt="" src="images/seallogo.png">
+            </a>
+            <a target="_blank" href="#">
+                <img src="images/startimg.jpg" alt="">
+            </a>
+            <img alt="" src="images/footer_img.gif"> &nbsp;&nbsp; 
+            <a rel="nofollow" target="_blank" href="#">
+                <img alt="" src="images/ktjc.gif"> 
+            </a>
+            <img alt="" src="images/dyh.jpg">
+            <img alt="" src="images/fwh.jpg">
+        </div>
+    </footer>
+</body>
+<script src="public/jquery.js"></script>
+<script src="public/jquery.banner.1.2.js"></script>
+<script src="public/ajax.js"></script>
+<script src="public/cookie.js"></script>
+<!-- <script src="js/index.js"></script> -->
+<script src="js/register.js"></script>
+</html>

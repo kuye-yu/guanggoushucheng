@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/shopping.css">
+</head>
+<body>
+     <!-- 头部 -->
+	<header>
+		<section class="top">
+			<div class="container">
+				<div class="fl">
+					<a href="javascript:;">收藏广购书城</a>
+					<div class="address">
+						<div class="areamini">送至：<span>广东</span></div>
+						<ul>
+							<li>
+								<a href="javascript:;">北京</a>
+							</li>
+							<li>
+								<a href="javascript:;">上海</a>
+							</li>
+							<li>
+								<a href="javascript:;">天津</a>
+							</li>
+							<li>
+								<a href="javascript:;">重庆</a>
+							</li>
+							<li>
+								<a href="javascript:;">河北</a>
+							</li>
+							<li>
+								<a href="javascript:;">山西</a>
+							</li>
+							<li>
+								<a href="javascript:;">河南</a>
+							</li>
+							<li>
+								<a href="javascript:;">辽宁</a>
+							</li>
+							<li>
+								<a href="javascript:;">吉林</a>
+							</li>
+							<li>
+								<a href="javascript:;">黑龙江</a>
+							</li>
+							<li>
+								<a href="javascript:;">内蒙古</a>
+							</li>
+							<li>
+								<a href="javascript:;">江苏</a>
+							</li>
+							<li>
+								<a href="javascript:;">山东</a>
+							</li>
+							<li>
+								<a href="javascript:;">安徽</a>
+							</li>
+							<li>
+								<a href="javascript:;">浙江</a>
+							</li>
+							<li>
+								<a href="javascript:;">福建</a>
+							</li>
+							<li>
+								<a href="javascript:;">湖北</a>
+							</li>
+							<li>
+								<a href="javascript:;">湖南</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="selected">广东</a>
+							</li>
+							<li>
+								<a href="javascript:;">广西</a>
+							</li>
+							<li>
+								<a href="javascript:;">江西</a>
+							</li>
+							<li>
+								<a href="javascript:;">四川</a>
+							</li>
+							<li>
+								<a href="javascript:;">海南</a>
+							</li>
+							<li>
+								<a href="javascript:;">贵州</a>
+							</li>
+							<li>
+								<a href="javascript:;">云南</a>
+							</li>
+							<li>
+								<a href="javascript:;">西藏</a>
+							</li>
+							<li>
+								<a href="javascript:;">陕西</a>
+							</li>
+							<li>
+								<a href="javascript:;">甘肃</a>
+							</li>
+							<li>
+								<a href="javascript:;">青海</a>
+							</li>
+							<li>
+								<a href="javascript:;">宁夏</a>
+							</li>
+							<li>
+								<a href="javascript:;">新疆</a>
+							</li>
+							<li>
+								<a href="javascript:;">台湾</a>
+							</li>
+							<li>
+								<a href="javascript:;">香港</a>
+							</li>
+							<li>
+								<a href="javascript:;">澳门</a>
+							</li>
+							<li>
+								<a href="javascript:;">钓鱼岛</a>
+							</li>
+							<li>
+								<a href="javascript:;">海外</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="fr" id="welcomeStr">
+					您好，欢迎来到广购书城：广州购书中心网上书店！
+					<a href="login.html">登录</a>
+					<a href="javascript:;">新用户注册</a>
+					<a href="javascript:;">我的订单</a>
+					<a href="javascript:;">企业官网</a>
+					<span>400-886-4208</span>
+				</div>
+			</div>
+        </section>
+        <section class="bottom wrapper container">
+            <div class="clear"></div>
+            <h1>
+                <a href="/" target="_blank"><img src="images/logo1.jpg" alt="广购书城"></a>
+            </h1>
+            <div class="search">
+                <form id="searchform" name="searchform" method="post" action="/ProductList.do ">
+                    <input id="topKeywords" type="text" value="贫穷的本质" onfocus="if (value =='贫穷的本质'){value =''};"><input type="submit" value="">
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <!-- 购物车 -->
+    <section class="buyCar wrapper">
+        <font color="red">注意：购物车商品一次只能装约30左右商品，如果商品大于30只请分开下单！谢谢！</font>
+        <div class="path">
+            <ul>
+                <li class="cur">
+                    <span style="background-image:url(images/carPath1.png);"></span>我的购物车<i></i>
+                </li>
+                <li>
+                    <span style="background-image:url(/images/carPath2.png);"></span>确认订单信息<i></i>
+                </li>
+                <li>
+                    <span style="background-image:url(/images/carPath3.png);"></span>成功提交订单<i></i>
+                </li>
+            </ul>
+        </div>
+        <div class="table-car">
+            <table class="title">
+                <tbody>
+                    <tr>
+                        <th class="t2">商品</th>
+                        <th class="t3">广购价</th>
+                        <th class="t5">定价</th>
+                        <th class="t6">数量</th>
+                        <th class="t7">操作</th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="full">
+                    <img src="images/fullToSub.png">
+                    满399减110您还差<span>￥276.6</span>        ,
+                    满299减60您还差<span>￥176.6</span>        ,
+                    满199减25您还差<span>￥76.6</span>        ,
+                    <a href="/">去凑单</a>
+            
+            </div>
+            <table class="list">
+                <tbody>
+                        <tr>
+							<td class="t1">
+                                <label><img src="images/main11.jpg"></label>
+                            </td>
+							<td class="td2">
+								<p>
+                                    <a href="/Product.do?id=6324319" target="_blank" title="早上九点叫醒我(精)">早上九点叫醒我(精)</a>
+                                </p>
+                                <div id="selectPresent" class="selectPresent"></div>
+                                <p></p>
+                            </td>
+                            <td class="td3">￥35.50(74折)</td>
+							<td class="td5">￥48.00</td>
+                            <td class="td6">
+								<div class="num" style="overflow: hidden;">
+										<i class="add fl" alt="" onclick="decamount(17172306,0,-1,'num',1,6324319,0,35.5,35.5,204,0);"></i>
+										<input type="text" id="amount17172306" value="1" onchange="updateAmount(17172306,this.value,0,-1,this.id,'num',1,6324319,0,35.5,35.5,204,0);">
+										<i class="sub fr" alt="" onclick="addamount(17172306,0,-1,'num',1,6324319,0,35.5,35.5,204,0);"></i>
+									</div>
+							</td>
+							<td class="td7">
+								<a href="javascript:void(0)" onclick="showDelAllCart('del','17172306');">删除</a>
+							</td>
+						</tr>
+                </tbody>
+			</table>
+			<div class="conclusion">
+				<div class="fl">
+					<a href="/DelCartItem.do?mid=0">删除所有的商品</a>
+				</div>
+				3 件商品 总计 <em>￥122.40</em><br>
+				-￥0
+			</div>
+			<div class="conclusion all">
+				合计（不含运费）<span id="totalPrice4">￥122.40</span>
+			</div>
+		</div>
+		<form>
+			<div class="submit">
+				<a class="fr" type="submit" href="/Cart/OrderForm.do" value="结算"> 结算</a>
+				<a href="javascript:goBackUrl();">&lt; 继续购物</a>
+			</div>
+		</form>
+	</section>
+
+
+	<!-- 尾部 -->
+	<footer id="footer">
+		<div id="myfooter" class="myfooter">
+			<!-- 友情链接-->
+			<div class="footer-t">友情链接：
+				<a href="#" target="_blank">广州新华出版发行集团</a>&nbsp;|
+				<a href="#" target="_blank">广州市新华书店集团有限公司&nbsp;</a>
+				<span>|&nbsp;</span>
+				<a href="#" target="_blank">广州出版社有限公司</a>
+				<span>&nbsp;|</span>
+				<a href="#" target="_blank">&nbsp;广州报刊亭有限公司</a>
+			</div>
+			<div class="footer-t">&nbsp;&nbsp;</div>
+			<div>
+				<a href="#">关于网站</a> |
+				<a href="#">公司简介</a> |
+				<a href="#">法律声明</a> |
+				<a href="#">联系我们</a>
+			</div>
+			<div class="footer-t">广州购书中心有限公司 版权所有? 2010 经营许可证：粤B2-20040295
+				<a href="#" target="_blank">粤ICP备10095868号</a>
+			</div>
+			<a href="#">
+				<img alt="" src="images/seallogo.png">
+			</a>
+			<a target="_blank" href="#">
+				<img src="images/startimg.jpg" alt="">
+			</a>
+			<img alt="" src="images/footer_img.gif"> &nbsp;&nbsp;
+			<a rel="nofollow" target="_blank" href="#">
+				<img alt="" src="images/ktjc.gif">
+			</a>
+			<img alt="" src="images/dyh.jpg">
+			<img alt="" src="images/fwh.jpg">
+		</div>
+	</footer>
+</body>
+<script src="public/jquery.js"></script>
+<script src="public/cookie.js"></script>
+<script src="public/ajax.js"></script>
+<script src="js/shopping.js"></script>
+</html>

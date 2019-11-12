@@ -1,0 +1,165 @@
+class Car{
+    constructor(options){
+        // 数据地址
+        this.url = options.url;
+        this.tbody = options.tbody;
+        // this.allBtn = options.allBtn;
+        // this.totalPrice = options.totalPrice;
+        // this.totalSum = options.totalSum;
+        // this.allDelete = options.allDelete;
+        // 初始化总价和总数量
+        this.money = 0;
+        this.quantity = 0;
+        // 读取到所有商品数据
+        this.load();
+         // 事件委托绑定事件
+        this.addEvent();
+        this.Delete();
+    }
+    // 读取所有数据方法
+    load(){
+        var that = this;
+        // 执行ajax
+        ajaxGet(this.url,function(res){
+            that.res = JSON.parse(res);
+            that.getCookie();
+        })
+    }
+    // 存储cookie数据方法
+    getCookie(){
+        this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+        this.display();
+    }
+    // 渲染页面方法 
+    display(){
+        var str = "";
+        // 遍历数据
+        for(var i=0;i<this.res.length;i++){
+            // 遍历商品
+            for(var j=0;j<this.goods.length;j++){
+                // 判断二者id是否相同
+                if(this.res[i].goodsId === this.goods[j].id){
+                    this.sum = this.goods[j].num * this.res[i].price;
+                   // 渲染页面
+                    str += `<tr>
+                                <td class="t1">
+                                    <label><img src="${this.res[i].img}"></label>
+                                </td>
+                                <td class="td2">
+                                    <p>
+                                        <a href="/Product.do?id=6324319" target="_blank" title="${this.res[i].name}">${this.res[i].name}</a>
+                                    </p>
+                                    <div id="selectPresent" class="selectPresent"></div>
+                                    <p></p>
+                                </td>
+                                <td class="td3">￥${this.res[i].price}(74折)</td>
+                                <td class="td5">￥${this.res[i].present}</td>
+                                <td class="td6">
+                                    <div class="num">
+                                            <i class="add fl" alt=""></i>
+                                            <input type="text" value="1">
+                                            <i class="sub fr" alt=""></i>
+                                        </div>
+                                </td>
+                                <td class="td7">
+                                    <a href="javascript:void(0)">删除</a>
+                                </td>
+                            </tr>
+                            `;
+                    //  // 单个价钱，总价，总数相应增加
+                    this.quantity += (this.goods[j].num - 0);
+                    this.money += (this.sum - 0);
+                //    this.zongHe(this.sum);
+                }
+            }
+        }
+        // 上树
+        this.totalPrice.innerHTML = `总价：${this.money}`;
+        this.totalSum.innerHTML = `总数量：${this.quantity}`;
+        this.tbody.innerHTML = str;
+    }
+    // 绑定事件方法
+    addEvent(){
+        var that = this;
+        // 点击删除
+        this.tbody.addEventListener("click",function(eve){
+            if(eve.target.tagName == "SPAN"){
+                that.id = eve.target.parentNode.parentNode.getAttribute("index");
+                eve.target.parentNode.parentNode.remove();
+                that.updateCookie(function(i){
+                    that.goods.splice(i,1);
+                    // 将总价和总数量清空重新渲染
+                    that.quantity = 0;
+                    that.money = 0;
+                    that.display();
+                });
+            }
+        })
+        // 点击改变商品数量
+        this.tbody.addEventListener("input",function(eve){
+            if(eve.target.className == "number"){
+                that.id = eve.target.parentNode.parentNode.getAttribute("index");
+                that.updateCookie(function(i){
+                    that.goods[i].num = eve.target.value;
+                    that.quantity = 0;
+                    that.money = 0;
+                    that.display();
+                });
+            }
+        })
+        // 全选按钮设置方法
+        this.allBtn.onclick = function(){
+            that.btns = document.querySelectorAll(".btn");
+            // console.log(that.btns);
+            for(var i = 0; i < that.btns.length; i++){
+                that.btns[i].checked = that.allBtn.checked;
+            }
+
+        }
+    //    单选设置按钮
+        var str = [];
+        this.tbody.addEventListener("click", function(eve){
+            if(eve.target.className == "btn"){
+                str.push(eve.target);
+                for(var i = 0; i < str.length; i++){
+                    if(!str[i].checked){
+                        that.allBtn.checked = str[i].checked;
+                        return;
+                    }
+                    that.allBtn.checked = "true";
+                }
+                
+                
+            }
+            
+        })
+    }
+    updateCookie(cb){
+       for(var i=0;i<this.goods.length;i++){
+            if(this.goods[i].id === this.id){
+               cb(i);
+            }
+        }
+        setCookie("goods",JSON.stringify(this.goods))
+    }
+    // 清除所有数据方法
+    Delete(){
+        var that = this;
+        this.allDelete.onclick = function(){
+            that.tbody.innerHTML = "";
+            removeCookie("goods")
+            that.totalPrice.innerHTML = `总价：0`;
+            that.totalSum.innerHTML = `总数量：0`;
+        }
+    }
+    
+    
+}
+new Car({
+    url:"http://localhost/1910-server/shopping/shopping.json",
+    tbody:document.querySelector(".table-car .list tbody"),
+    // allBtn:document.getElementById("allbtn"),
+    // totalPrice:document.getElementById("total-price"),
+    // totalSum:document.getElementById("total-sum"),
+    // allDelete:document.getElementById("allDelete")
+})

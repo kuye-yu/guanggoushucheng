@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+    <!-- 头部 -->
+	<header>
+		<section class="top">
+			<div class="container">
+				<div class="fl">
+					<a href="javascript:;">收藏广购书城</a>
+					<div class="address">
+						<div class="areamini">送至：<span>广东</span></div>
+						<ul>
+							<li>
+								<a href="javascript:;">北京</a>
+							</li>
+							<li>
+								<a href="javascript:;">上海</a>
+							</li>
+							<li>
+								<a href="javascript:;">天津</a>
+							</li>
+							<li>
+								<a href="javascript:;">重庆</a>
+							</li>
+							<li>
+								<a href="javascript:;">河北</a>
+							</li>
+							<li>
+								<a href="javascript:;">山西</a>
+							</li>
+							<li>
+								<a href="javascript:;">河南</a>
+							</li>
+							<li>
+								<a href="javascript:;">辽宁</a>
+							</li>
+							<li>
+								<a href="javascript:;">吉林</a>
+							</li>
+							<li>
+								<a href="javascript:;">黑龙江</a>
+							</li>
+							<li>
+								<a href="javascript:;">内蒙古</a>
+							</li>
+							<li>
+								<a href="javascript:;">江苏</a>
+							</li>
+							<li>
+								<a href="javascript:;">山东</a>
+							</li>
+							<li>
+								<a href="javascript:;">安徽</a>
+							</li>
+							<li>
+								<a href="javascript:;">浙江</a>
+							</li>
+							<li>
+								<a href="javascript:;">福建</a>
+							</li>
+							<li>
+								<a href="javascript:;">湖北</a>
+							</li>
+							<li>
+								<a href="javascript:;">湖南</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="selected">广东</a>
+							</li>
+							<li>
+								<a href="javascript:;">广西</a>
+							</li>
+							<li>
+								<a href="javascript:;">江西</a>
+							</li>
+							<li>
+								<a href="javascript:;">四川</a>
+							</li>
+							<li>
+								<a href="javascript:;">海南</a>
+							</li>
+							<li>
+								<a href="javascript:;">贵州</a>
+							</li>
+							<li>
+								<a href="javascript:;">云南</a>
+							</li>
+							<li>
+								<a href="javascript:;">西藏</a>
+							</li>
+							<li>
+								<a href="javascript:;">陕西</a>
+							</li>
+							<li>
+								<a href="javascript:;">甘肃</a>
+							</li>
+							<li>
+								<a href="javascript:;">青海</a>
+							</li>
+							<li>
+								<a href="javascript:;">宁夏</a>
+							</li>
+							<li>
+								<a href="javascript:;">新疆</a>
+							</li>
+							<li>
+								<a href="javascript:;">台湾</a>
+							</li>
+							<li>
+								<a href="javascript:;">香港</a>
+							</li>
+							<li>
+								<a href="javascript:;">澳门</a>
+							</li>
+							<li>
+								<a href="javascript:;">钓鱼岛</a>
+							</li>
+							<li>
+								<a href="javascript:;">海外</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="fr" id="welcomeStr">
+					您好，欢迎来到广购书城：广州购书中心网上书店！
+					<a href="login.html">登录</a>
+					<a href="javascript:;">新用户注册</a>
+					<a href="javascript:;">我的订单</a>
+					<a href="javascript:;">企业官网</a>
+					<span>400-886-4208</span>
+				</div>
+			</div>
+		</section>
+		<div class="bottom container">
+			<div class="swiper">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+
+						<a href="#"><img src="images/swiper1.jpg"></a>
+
+
+						<a href="#"><img src="images/swiper2.jpg"></a>
+
+
+						<a href="#"><img src="images/swiper3.jpg"></a>
+
+					</div>
+				</div>
+			</div>
+			<div class="logo">
+				<a href="/" target="_blank">
+					<img src="images/logo1.jpg" alt="广购书城">
+				</a><br>
+				<a href="#">
+					<img src="images/logo2.gif">
+				</a>
+			</div>
+			<div class="shopping-car fr">
+				<div id="IncludeSmallCartDiv" class="fl">
+					<a class="car" href="#">购物车 0 </a>
+				</div>
+				<a href="/Member/AllOrderList.do">我的订单</a>
+			</div>
+			<div class="search">
+				<form id="searchform" name="searchform">
+					<input type="text" id="topKeywords" autocomplete="off" value="贫穷的本质">
+					<input type="submit" id="topsearch" value="">
+					<span><a href="#">高级搜索</a></span>
+					<div class="hot-search">
+					</div>
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+    </header>
+    <nav>
+		<div class="container">
+			<div class="all-classify">
+				全部图书分类<i></i>
+			</div>
+			<ul>
+				<li class="cur"><a href="#" class="current">首页</a></li>
+				<li><a href="#">新书预售</a></li>
+				<li><a href="#">新书精选</a></li>
+				<li><a href="#">特惠图书</a></li>
+				<li><a href="#">畅销图书</a></li>
+				<li><a href="#">考试书店<img src="images/hot.gif"></a></li>
+				<li><a id="xianliang" href="#">限量亲签版</a> </li>
+				<li><a href="#">电子书</a></li>
+				<li><a href="#">招聘信息</a></li>
+			</ul>
+		</div>
+    </nav>
+
+    <!-- 商品列表 -->
+    <section class="product container">
+        <div class="tt">
+	        <strong><a href="/">广购书城</a></strong>
+            &gt; <a href="/ProductList.do?Cid=50000">图书</a>
+            &gt; <a href="/ProductList.do?Cid=4741308">排行畅销</a>
+            &gt; 铿锵点书(92册在售)
+        </div>
+        <div class="leftNav">
+	        <div class="top">
+                <div class="nt">
+                    <strong>铿锵点书</strong>
+                </div>
+                <div id="loadSort">
+                    <ul class="fenlei-list">
+                        <li>·<a href="#" class="">6月第四周</a><span>(35)</span></li>
+                        <li>·<a href="#" class="">2016中国最美书籍</a><span>(70)</span></li>
+                        <li>·<a href="#" class="">微信互动有礼</a><span>(12)</span></li>
+                        <li>·<a href="#" class="">开学无忧</a><span>(118)</span></li>
+                        <li>·<a href="#" class="">珍贵绘本</a><span>(7)</span></li>
+                        <li>·<a href="#" class="">七月第三周</a><span>(31)</span></li>
+                        <li>·<a href="#" class="">2016年12月小编之选</a><span>(6)</span></li>
+                        <li>·<a href="#" class="">2017年2月</a><span>(38)</span></li>
+                        <li>·<a href="#" class="">4月第四周榜</a><span>(39)</span></li>
+                        <li>·<a href="#" class="cur">铿锵点书</a><span>(92)</span></li>
+                        <li>·<a href="#" class="">9月第二周榜</a><span>(39)</span></li>
+                        <li>·<a href="#" class="">2017年1月排行榜</a><span>(44)</span></li>
+                        <li>·<a href="#" class="">三月四周排行</a><span>(38)</span></li>
+                        <li>·<a href="#" class="">8月第三周</a><span>(33)</span></li>
+                        <li>·<a href="#" class="">五月第2周</a><span>(35)</span></li>
+                        <li>·<a href="#" class="">2016年度广购好书</a><span>(77)</span></li>
+                        <li>·<a href="#" class="">五月3周榜</a><span>(36)</span></li>
+                        <li>·<a href="#" class="">17年2月第三周</a><span>(37)</span></li>
+                        <li>·<a href="#" class="">天才的编辑</a><span>(48)</span></li>
+                        <li>·<a href="#" class="">2016-12月排行</a><span>(7)</span></li>
+                        <li>·<a href="#" class="">小编之选专题</a><span>(7)</span></li>
+                        <li>·<a href="#" class="">2018年十大好书评选</a><span>(34)</span></li>
+                        <li>·<a hhref="#" class="">2月经管职场</a><span>(9)</span></li>
+                        <li>·<a href="#" class="">17年2月第一周</a><span>(36)</span></li>
+                        <li>·<a href="#" class="">六月总榜</a><span>(70)</span></li>
+                        <li>·<a href="#" class="">16年中国好书</a><span>(27)</span></li>
+                        <li>·<a href="#" class="">8月周榜</a><span>(30)</span></li>
+                        <li>·<a href="#" class="">微信排行榜</a><span>(34)</span></li>
+                        <li>·<a href="#" class="">二战</a><span>(22)</span></li>
+                        <li>·<a href="#" class="">8月月榜</a><span>(76)</span></li>
+                        <li>·<a href="#" class="">4月第二周</a><span>(40)</span></li>
+                        <li>·<a href="#" class="">周榜（2018.3.5-2018.3.11）</a><span>(24)</span></li>
+                        <li>·<a href="#" class="">2月第二周</a><span>(28)</span></li>
+                        <li>·<a href="#"" class="">现代的历程-沙龙活动</a><span>(3)</span></li>
+                        <li>·<a href="#" class="">六月第4周榜</a><span>(37)</span></li>
+                        <li>·<a href="#" class="">4月第四周</a><span>(35)</span></li>
+                        <li>·<a href="#" class="">广购之最</a><span>(74)</span></li>
+                        <li>·<a href="#" class="">2017第四周排行</a><span>(38)</span></li>
+                        <li>·<a href="#" class="">三月第三周</a><span>(39)</span></li>
+                        <li>·<a href="#" class="">三月名家汇聚</a><span>(14)</span></li>
+                        <li>·<a href="#" class="">西游记主题</a><span>(6)</span></li>
+                        <li>·<a href="#" class="">17年4月榜</a><span>(77)</span></li>
+                        <li>·<a href="#" class="">5月第二周</a><span>(37)</span></li>
+                        <li>·<a href="#" class="">17年5月畅销</a><span>(72)</span></li>
+                        <li>·<a href="#" class="">六月第2周</a><span>(34)</span></li>
+                        <li>·<a href="#" class="">周榜170726</a><span>(35)</span></li>
+                        <li>·<a href="#" class="">7月月版</a><span>(68)</span></li>
+                        <li>·<a href="#" class="">8月第二周</a><span>(37)</span></li>
+                        <li>·<a href="#" class="">八月周榜</a><span>(4)</span></li>
+                        <li>·<a href="#" class="">八月四周</a><span>(35)</span></li>
+                        <li>·<a href="#" class="">书信主题书单</a><span>(4)</span></li>
+                        <li>·<a href="#" class="">9月第三周</a><span>(38)</span></li>
+                        <li>·<a href="#" class="">蒋勋 </a><span>(2)</span></li>
+                        <li>·<a href="#" class="">外国大师推荐</a><span>(18)</span></li>
+                        <li>·<a href="#" class="">9月第4周</a><span>(29)</span></li>
+                        <li>·<a href="#" class="">摄影集推荐</a><span>(7)</span></li>
+                        <li>·<a href="#" class="">2017年9月月榜</a><span>(33)</span></li>
+                        <li>·<a href="#" class="">国庆推荐书</a><span>(8)</span></li>
+                        <li>·<a href="#" class="">国庆68折儿童书单</a><span>(4)</span></li>
+                        <li>·<a href="#" class="">10月第一周榜</a><span>(39)</span></li>
+                        <li>·<a href="#" class="">推荐书单</a><span>(13)</span></li>
+                        <li>·<a href="#" class="">作家与他们的城市</a><span>(4)</span></li>
+                        <li>·<a href="#" class="">时间管理推荐书</a><span>(2)</span></li>
+                        <li>·<a href="#" class="">10月第二周榜</a><span>(36)</span></li>
+                        <li>·<a href="#" class="">饮食wx</a><span>(2)</span></li>
+                        <li>·<a href="#" class="">2017年10月第三周榜</a><span>(37)</span></li>
+                        <li>·<a href="#" class="">专题推荐1027</a><span>(4)</span></li>
+                        <li>·<a href="#" class="">推荐(20171102)</a><span>(4)</span></li>
+                        <li>·<a href="#" class="">2017年10月榜</a><span>(75)</span></li>
+                        <li>·<a href="#" class="">十九大图书</a><span>(240)</span></li>
+                        <li>·<a href="#" class="">11月第一周</a><span>(37)</span></li>
+                        <li>·<a href="#" class="">11月第二周榜</a><span>(40)</span></li>
+                        <li>·<a href="#" class="">作家张欣的好书</a><span>(2)</span></li>
+                        <li>·<a href="#" class="">11月第三周榜</a><span>(39)</span></li>
+                        <li>·<a href="#" class="">17年11月第四周榜</a><span>(37)</span></li>
+                        <li>·<a href="#" class="">大冰</a><span>(5)</span></li>
+                        <li>·<a href="#" class="">学习党的十九大精神</a><span>(9)</span></li>
+                        <li>·<a href="#" class="">学习贯彻党的十九大</a><span>(5)</span></li>
+                        <li>·<a href="#" class="">2017年11月榜</a><span>(78)</span></li>
+                        <li>·<a href="#" class="">黄爱东西的书单</a><span>(1)</span></li>
+                        <li>·<a href="#" class="">弘扬“红船精神”</a><span>(2)</span></li>
+                        <li>·<a href="#" class="">余光中</a><span>(15)</span></li>
+                        <li>·<a href="#" class="">12月第一周榜</a><span>(38)</span></li>
+                        <li>·<a href="#" class="">芭比</a><span>(4)</span></li>
+                        <li>·<a href="#" class="">2017年铿锵回顾</a><span>(24)</span></li>
+                        <li>·<a href="#" class="">17年12月第二周榜</a><span>(79)</span></li>
+                        <li>·<a href="#" class="">17年12月榜</a><span>(77)</span></li>
+                        <li>·<a href="#" class="">18年1月第一周榜</a><span>(38)</span></li>
+                        <li class="list_lm1bott"><a href="#">返回上级</a></li>
+                    </ul>
+                    <div class="bot"></div>
+                </div>
+                <div class="bot"></div>
+            </div>	
+		</div>
+		<div class="rightCon">
+			<div class="orderBy">
+				<div class="selectB">
+					<input type="text" value="按出版时间 降">
+					<a href="javascript:;"></a>
+					<ul>
+						<li id="sorting1">按相关度 </li>
+						<li id="sorting2">按销售量 降</li>
+						<li id="sorting3">按折扣 升</li>
+						<li id="sorting4">按评论数 降</li>
+						<li id="sorting5">按出版时间 降</li>
+						<li id="sorting6">按出版时间 升 </li>
+					</ul>
+				</div>
+				<ul class="fiveB">
+					<li class=""><a id="sorting11" title="相关度由大到小" class="up">相关度</a></li>
+					<li class=""><a id="sorting22" title="销量由高到底" class="down">销量</a></li>
+					<li class=""><a id="sorting33" title="折扣由小到大" class="up">折扣</a></li>
+					<li class=""><a id="sorting44" title="评论数由多到少" class="up">评论</a></li>
+					<li class=" cur "><a id="sorting55" title="出版时间由近到远" class="up">出版时间</a></li>
+				</ul>
+				<div class="checkboxB">
+					<label>
+					<input type="checkbox" onclick="javaScript:setUrlPara('page','1','NeedStock',this.checked?'true':'false');">
+					&nbsp;只显示有货
+					</label>
+				</div>
+				<div class="lookWay">
+						<span>显示方式</span>
+						<a onclick="javaScript:setUrlPara('displayType','1');"><img src="images/list_ico.png"></a>
+						<a onclick="javaScript:setUrlPara('displayType','2');"><img src="images/list2_ico_cur.png"></a>
+				</div>
+				<div class="pageB">
+					<a onclick="javascript:void(0)" title="目前已是第一页" class="pre"></a>
+					<span>第<i>1</i>页</span>
+				 	<a class="nextpage" onclick="javaScript:setUrlPara('page','2');" title="下一页"></a>
+				</div>	
+			</div>
+			<form name="plist" id="plist">
+				<div id="search_list">
+					<div class="proList">
+							<ul class="list">
+								<!-- <li class='bookli'>
+									<div class="li-img fl">
+										<a href="/Product.do?id=6526395" target="_blank">
+											<img id="imgbox_6526395" src="/upload/pictures/uploadProductImages/20180419/pic180_9787532777242.jpg" alt="暂无图片" title="我辈孤雏（精）"/>
+										</a>
+									</div>
+									<img class="icon1111" src="/upload/618/200-100.png" />
+									<div class="li-con fl">
+										<h2>
+											<img class="icon1111" src="/upload/618/618.png" /> 
+											<a href="/Product.do?id=6526395" title="我辈孤雏（精）" target="_blank">
+												<strong> 我辈孤雏（精）</strong>
+											</a>
+										</h2>
+										<dl>
+											<dt>
+												<div class="line_1">
+													<div class="marketPrice" style='text-decoration:line-through;'>
+														<span class="priceName">定价：</span>
+														<span class="priceValue">￥46.00</span>
+													</div>
+													<div class="memberPrice" style='color: red;' >
+														<span class="priceName">广购价：</span>
+														<span class="priceValue">￥34.50</span>
+													</div>
+												</div>
+												<div class="line_2">
+													<p>顾客评分</p>
+														<p class="review_d">
+															<span>
+																<i></i><i></i><i></i><i></i><i></i>
+															</span>
+														</p>
+													</p>
+												</div>
+												<div class="line_3">
+													<span>作者：
+														<em ><a href="/ProductList.do?Author=[英]石黑一雄">
+														[英]石黑一雄</a>
+														</em>&nbsp;
+														<em ><a href="/ProductList.do?Author=著;">
+														著;</a>
+														</em>&nbsp;
+														著
+													</span>
+													<span>出版社：
+														<em class="cut" title="上海译文">
+														<a href="/ProductList.do?publish=上海译文">上海译文</a>
+														</em>
+													</span>
+													<span>出版时间：
+														<em>2018-03-01</em>
+													</span>
+												</div>
+												<div class="line_4">在所有的诺贝尔文学奖得主中间，石黑一雄是仅有的一位与上海有着如此之深的家族与个人情感渊源的：他的祖父石黑昌明毕业于上海东亚同文书院，后来成为上海丰田纺织工厂的负责人；他的父亲石黑镇雄就出生于上海。除了《我辈孤雏》，石黑一雄担任编剧的电影《伯爵夫人》也是以上...</div>
+												</dt>
+												<dd>
+													<a class="b_1" href="javascript:;" onclick="_gaq.push(['_trackEvent', 'click','购买键', '搜索页>放购物车']);isGoToCart(6526395)">加入购物车</a>
+													<a href="javascript:;" class="b_2" onClick="addFavor(0,6526395);"> 放入收藏夹 </a>
+												</dd>
+											</dl>
+										</div>
+								</li> -->
+							</ul>
+					</div>
+				</div>
+			</form>
+		</div>
+    </section>
+
+    <!-- 基本介绍 -->
+	<section class="synopsis">
+		<div class="container">
+			<dl>	
+				<dt>会员注册</dt>
+				<dd><i></i><a href="register.html">新用户注册</a></dd>
+				<dd><i></i><a href="#">会员积分政策</a></dd>
+			</dl>
+			<dl>	
+				<dt>支付方式</dt>
+				<dd><i></i><a href="#">停止货到付款服务</a></dd>
+				<dd><i></i><a href="#">银行汇款</a></dd>
+				<dd><i></i><a href="#">邮局汇款</a></dd>
+				<dd><i></i><a href="#">第三方支付方式</a></dd>
+			</dl>
+			<dl>	
+	 			<dt>购物流程</dt>
+				<dd><i></i><a href="#">订购演示</a></dd>
+				<dd><i></i><a href="#">GG卡和GG券使用说明</a></dd>
+				<dd><i></i><a href="#">团购服务指引</a></dd>
+			</dl>
+			<dl>	
+				<dt>配送方式</dt>
+				<dd><i></i><a href="#">配送费用/时间/范围</a></dd>
+			</dl>
+			<dl>	
+				<dt>售后服务</dt>
+				<dd><i></i><a href="#">发票制度</a></dd>
+				<dd><i></i><a href="#">退款方式</a></dd>
+				<dd><i></i><a href="#">退换货流程</a></dd>
+				<dd><i></i><a href="#">联系我们</a></dd>
+			</dl>
+		</div>
+	</section>
+	
+	<!-- 尾部 -->
+	<footer id="footer">
+		<div id="myfooter" class="myfooter">
+			<!-- 友情链接-->
+			<div class="footer-t">友情链接：
+				<a href="#" target="_blank">广州新华出版发行集团</a>&nbsp;|
+				<a href="#" target="_blank">广州市新华书店集团有限公司&nbsp;</a>
+				<span>|&nbsp;</span>
+				<a href="#" target="_blank">广州出版社有限公司</a>
+				<span>&nbsp;|</span>
+				<a href="#" target="_blank">&nbsp;广州报刊亭有限公司</a>
+			</div>
+			<div class="footer-t">&nbsp;&nbsp;</div>
+			<div>
+				<a href="#">关于网站</a> |
+				<a href="#">公司简介</a> |
+				<a href="#">法律声明</a> |
+				<a href="#">联系我们</a>
+			</div>
+			<div class="footer-t">广州购书中心有限公司 版权所有? 2010 经营许可证：粤B2-20040295
+				<a href="#" target="_blank">粤ICP备10095868号</a>
+			</div>
+			<a href="#">
+				<img alt="" src="images/seallogo.png">
+			</a>
+			<a target="_blank" href="#">
+				<img src="images/startimg.jpg" alt="">
+			</a>
+			<img alt="" src="images/footer_img.gif"> &nbsp;&nbsp;
+			<a rel="nofollow" target="_blank" href="#">
+				<img alt="" src="images/ktjc.gif">
+			</a>
+			<img alt="" src="images/dyh.jpg">
+			<img alt="" src="images/fwh.jpg">
+		</div>
+	</footer>
+</body>
+<script src="public/jquery.js"></script>
+<script src="public/ajax.js"></script>
+<script src="public/jquery.banner.1.2.js"></script>
+<script src="js/list.js"></script>
+</html>
