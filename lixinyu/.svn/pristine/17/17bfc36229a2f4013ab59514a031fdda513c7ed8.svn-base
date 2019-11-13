@@ -91,7 +91,7 @@ class List{
     }
     setLocalStorage(eve){
         // 判定点击的是详情页还是购物车
-        if(eve.target.classNames == "b_1"){
+        if(eve.target.className == "b_1"){
             this.goods = JSON.parse (localStorage.getItem("goods"))? JSON.parse (localStorage.getItem("goods")) : [];
             if(this.goods.length == 0){
                 this.goods.push({

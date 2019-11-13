@@ -366,11 +366,9 @@
                 <div class="preview">
                     <div class="f_spec_n">
                         <a href="/upload/pictures/uploadProductImages/20180419/pic500_9787532777242.jpg">
-                            <img class="jqzoom" src="images/big.jpg" style="width:300px; height:300px">
-						</a>
-						<div class="box"></div>
-					</div>
-					<div id="bigArea"></div>
+                            <img class="jqzoom" src="images/big.jpg" alt="" rel="/upload/pictures/uploadProductImages/20180419/pic500_9787532777242.jpg">
+                        </a>
+                    </div>
                     <div class="f_spec_list" id="thumblist">
                         <ul>
                             <li class="tb-selected">

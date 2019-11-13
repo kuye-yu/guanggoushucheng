@@ -46,7 +46,9 @@ class Details{
                                             <a href="${this.res[j].img}">
                                                 <img class="jqzoom" src="${this.res[j].img}" alt="">
                                             </a>
+                                            <div class="box"></div>
                                         </div>
+                                        <div id="bigArea" style="background: url(./${this.res[j].img});"></div>
                                         <div class="f_spec_list" id="thumblist">
                                             <ul>
                                                 <li class="tb-selected">
@@ -182,10 +184,96 @@ class Details{
         // 上树
         this.headPosition.innerHTML = str;
         this.bottomPosition.innerHTML = str1;
+        this.carousel();
+    }
+    carousel(){
+        this.wrap = document.querySelector(".preview .f_spec_n");
+        this.box = document.querySelector(".box");
+        console.log(this.wrap);
+        this.bigArea = document.getElementById("bigArea");
+        this.init();
+        this.r;
+        this.mouseX;
+        this.mouseY;
+        this.elementX;
+        this.elementY;
+        this.resultX;
+        this.resultY;
+        this.offset = function offset(dom) {
+            // 返回一个对象
+            this.obj = {
+                left: 0,
+                top: 0
+            }
+            // 先让这个对象加上 dom的自己得到定位父元素的距离
+            this.obj.left = dom.offsetLeft;
+            this.obj.top = dom.offsetTop;
+            // 判定浏览器是否是IE8 
+            return this.obj;
+            }    
+    }
+    // 初始化方法
+    init(){
+        this.interImg();
+        this.leave();
+    }
+    interImg(){
+        var that= this;
+        that.enter();
+    }
+    // 鼠标进入图片区域 才显示镜片和放大镜
+    enter(){
+        var that = this;
+        this.wrap.onmouseenter = function() {
+            that.box.style.display = "block";
+            that.bigArea.style.display = "block";
+            that.r= (that.wrap.clientWidth - that.box.clientWidth) / (800 - that.bigArea.clientWidth);
+            that.move();
+        
+        }
+    }
+    // 绑定mousemove事件
+    move(){
+        var that = this;
+        document.onmousemove = function(e) {
+            // 计算鼠标在页面中的距离
+            
+            that.mouseX =  e.pageX;
+            that.mouseY = e.pageY;
+            // 计算元素在视口中的距离
+            that.elementX = that.offset(that.wrap).left;
+            that.elementY = that.offset(that.wrap).top;
+            // 计算鼠标在元素中的距离
+            that.resultX = that.mouseX - that.elementX - that.wrap.clientLeft - that.box.clientWidth / 2;
+            that.resultY = that.mouseY - that.elementY - that.wrap.clientTop - that.box.clientHeight / 2;
+            if (that.resultX < 0) {
+                that.resultX = 0;
+            } else if (that.resultX > that.wrap.clientWidth - that.box.clientWidth) {
+                that.resultX = that.wrap.clientWidth - that.box.clientWidth;
+            }
+
+            if (that.resultY < 0) {
+                that.resultY = 0;
+            } else if (that.resultY > that.wrap.clientHeight - that.box.clientHeight) {
+                that.resultY = that.wrap.clientHeight - that.box.clientHeight;
+            }
+            that.box.style.left = that.resultX + "px";
+            that.box.style.top = that.resultY + "px";
+            that.bigArea.style.backgroundPositionX = - that.resultX / that.r + "px";
+            that.bigArea.style.backgroundPositionY = - that.resultY / that.r + "px";
+            
+        }
+    }
+    leave(){
+        var that = this;
+        this.wrap.onmouseleave = function(){
+            that.box.style.display = "none";
+            that.bigArea.style.display = "none";
+        }
     }
 }
 new Details({
     url:"http://localhost/lixinyu/json/shopping.json",
     headPosition:document.getElementById("head_position"),
     bottomPosition:document.getElementById("detail-tag-id-1")
-})
+});

@@ -57,8 +57,11 @@ nav ul li a {color: #fff;display: block;}
 .breadcrumb a {color: #333;}
 .details{overflow: hidden;}
 .details .pro_intro {padding: 23px 28px;background: #fff;}
+.details .pro_intro .box {display: none;position: absolute;top: 0;left: 0;width: 150px;height: 150px;background: url(./images/dotpng.png)}
+.details #bigArea {width: 300px;height: 300px;position: absolute;top: 520px;left: 430px;border: 1px solid #000;display: none;z-index: 100001;}
 .preview {float: left;}
 .preview .f_spec_n {position: relative;}
+.preview .f_spec_n .jqzoom{width: 300px;height: 300px;}
 .f_spec_list {padding: 18px 0;overflow: hidden;}
 .f_spec_list li {float: left;margin-right: 8px;}
 .f_spec_list li.tb-selected {border: 1px solid #e62129;padding: 0;}
