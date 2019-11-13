@@ -45,10 +45,10 @@ class Details{
                                         <div class="f_spec_n">
                                             <a href="${this.res[j].img}">
                                                 <img class="jqzoom" src="${this.res[j].img}" alt="">
-                                            </a>
+                                            </a> 
                                             <div class="box"></div>
                                         </div>
-                                        <div id="bigArea" style="background: url(./${this.res[j].img});"></div>
+                                        <div id="bigArea" style="background: url(./${this.res[j].img}); background-size:600px 600px;background-repeat:no-repeat"></div>
                                         <div class="f_spec_list" id="thumblist">
                                             <ul>
                                                 <li class="tb-selected">
@@ -176,7 +176,7 @@ class Details{
                                 <div class="book-detail-content">
                                     <p style="text-indent:2rem">${this.res[j].synopsis}</p>
                                 </div>
-                        </div>
+                            </div>
                         `    
                 }
             }
@@ -209,6 +209,20 @@ class Details{
             this.obj.left = dom.offsetLeft;
             this.obj.top = dom.offsetTop;
             // 判定浏览器是否是IE8 
+            var isIE8 = window.navigator.userAgent.indexOf("MSIE 8") != -1;
+            // // 循环往上走 累加每一个offsetParent的offsetLeft和clientLeft 
+            // // 加每一个offsetParent的offsetTop和clientTop
+            this.offsetParent = dom.offsetParent;
+            while (this.offsetParent != document.body) {
+                if (isIE8) {
+                    this.obj.left += this.offsetParent.offsetLeft;
+                    this.obj.top += this.offsetParent.offsetTop;
+                } else {
+                    this.obj.left += this.offsetParent.offsetLeft + this.offsetParent.clientLeft;
+                    this.obj.top += this.offsetParent.offsetTop + this.offsetParent.clientTop;
+                }
+                this.offsetParent = this.offsetParent.offsetParent;
+            }
             return this.obj;
             }    
     }
@@ -227,7 +241,7 @@ class Details{
         this.wrap.onmouseenter = function() {
             that.box.style.display = "block";
             that.bigArea.style.display = "block";
-            that.r= (that.wrap.clientWidth - that.box.clientWidth) / (800 - that.bigArea.clientWidth);
+            that.r= (that.wrap.clientWidth - that.box.clientWidth) / (600 - that.bigArea.clientWidth);
             that.move();
         
         }
