@@ -94,6 +94,7 @@ main .dishes .dishes_list ul li {float: left;margin: 0 16px 15px 0;position: rel
 main .dishes .dishes_list ul li img {width: 298px;height: 136px;}
 main .dishes .dishes_list ul li i {position: absolute;bottom: 7px;left: 12px;color: #fff;    z-index: 1;}
 main .dishes .dishes_list ul li span {display: inline-block;width: 298px;height: 28px;background: rgba(0,0,0,0.7);position: absolute;bottom: 0;left: 0;}
+/* 热卖图书 */
 main .hot .list {overflow: hidden;padding: 0 35px 0 39px;}
 main .hot .list ul li {width: 150px;float: left;margin-right: 26px;line-height: 24px;}
 main .hot .list ul li img {width: 153px;height: 153px;padding: 18px 0;border: 1px solid #eae9e9;
@@ -101,6 +102,7 @@ margin-bottom: 18px;}
 main .hot .list ul li p {font-size: 14px;color: #333;}
 main .hot .list ul li span{font-size: 16px;color: #e62129;}
 main .title1 {border-bottom: 1px solid #be1f2d;background: url(../images/ico-line.png) no-repeat left center;font:700 18px/38px "";color: #4b4b4c;text-indent: 10px;font-family: "microsoft YaHei";text-align: left;}
+/* 新书上架 */
 main .newBook .new {padding: 0 18px 50px;}
 main .newBook .new .list {position: relative;margin-top: 25px;padding: 0;height: 281px;}
 main .newBook .new .list .bookList {overflow: hidden;}
@@ -112,6 +114,7 @@ main .newBook .new .list .bookList ul li span {font-size: 16px;color: #e62129;}
 main .newBook .new .list i {cursor: pointer;position: absolute;top: 88px;width: 27px;height: 46px;background-image: url(../images/ico-arrow.png);}
 main .newBook .new .list i.left {left: 0px;background-position: 0;}
 main .newBook .new .list i.right {right: 0px;background-position: 27px;}
+/* 每周推荐 */
 main .promo .limit {width: 210px;line-height: 24px;}
 main .promo .limit .title {margin-bottom: 25px;;color: #000;background:none}
 main .promo .limit .title i {width: 27px;height: 27px;display: inline-block;vertical-align: text-bottom;background: url(../images/ico-sidebar.png);margin-right: 10px;}
@@ -124,6 +127,7 @@ main .promo .list ul li p {font-size: 14px;color: #333;}
 main .promo .list ul li del {display: block;font-size: 14px;color: #666;}
 main .promo .list ul li span {font-size: 14px;color: #666;display: block;}
 main .promo .list ul li font {font-size: 16px;color: #e62129;}
+/* 推荐图书 */
 main .column .ranking {width: 210px;padding-top: 38px;}
 main .column .ranking .title2 {font-family: "microsoft YaHei";font-size: 18px;color: #000;line-height: 27px;overflow: hidden;margin-bottom: 14px;}
 main .column .ranking .title2 a {font-size: 12px;color: #5a5a5a;}
@@ -139,7 +143,51 @@ main .column .ranking .list ul li {padding-left: 45px;position: relative;border-
 main .column .ranking .list ul li i {width: 22px;height: 22px;user-select: none;font: 14px/22px "";color: #666;position: absolute;top: 7px;left: 5px;text-align: center;background: url(../images/rankingS.png);}
 main .column .ranking .list ul li i.top {top: 4px;color: #fff;height: 28px;background: url(../images/rankingT.png);}
 main .column .ranking .list ul li a {display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+main .column .leftColumn {width: 968px;overflow: hidden;}
+main .column .leftColumn.purple h6 {border-bottom: 1px solid #400e84;}
+main .column .leftColumn .sidebarNav {width: 180px;height: 544px;float: left;background: no-repeat bottom center;}
+main .column .leftColumn.purple .sidebarNav {background-color: #9f7add;background-image: url(../images/9.png);}
+main .column .leftColumn .sidebarNav ul {padding-top: 24px;float: right;}
+main .column .leftColumn .sidebarNav ul li {width: 102px;height: 30px;text-align: center;line-height: 30px;font-size: 18px;margin-bottom: 14px;}
+main .column .leftColumn .sidebarNav ul li.cur {position: relative;}
+main .column .leftColumn .sidebarNav ul li.cur b {border: 15px solid transparent;border-right: 0;position: absolute;top: 0;right: -15px;font-size: 0;width: 0;height: 0;line-height: 0;}
+main .column .leftColumn.purple .sidebarNav ul li.cur b {border-left-color: #5f3d8e;}
+main .column .leftColumn.purple .sidebarNav ul li {background: #7a5ba5;}
+main .column .leftColumn.purple .sidebarNav ul li.cur {background: #5f3d8e;}
+main .column .leftColumn .sidebarNav ul li a {color: #fff!important;display: block;}
+main .column .leftColumn .list {margin-left: 180px;width: 788px;height: 544px;overflow: hidden;padding: 0;}
+main .column .leftColumn .list ul {overflow: hidden;display: none;}
+main .column .leftColumn .list ul li {float: left;margin-top: 20px;margin-left: 18px;width: 155px;padding: 0 10px;height: 250px;border: 1px solid #eae9e9;margin-right: 0;}
+main .column .leftColumn .list ul li p {font-size: 14px;color: #333;line-height: 24px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;-o-text-overflow: ellipsis;}
+main .column .leftColumn .list ul li span {font-size: 16px;color: #e62129;line-height: 22px;}
+/* 热评商品 */
+main .hotEvaluation .limit {width: 210px;line-height: 24px;}
+main .hotEvaluation .fr .title2 {margin-bottom: 25px;font-family: "microsoft YaHei";border-bottom: 1px solid #be1f2d;line-height: 38px;font-size: 18px;color: #000;position: relative;}
+main .hotEvaluation .fr .title2 a.more {font-size: 12px;color: #5a5a5a;float: right;font-family: "ç€¹å¬©ç¶‹";}
+main .hotEvaluation .fr .title2 i {width: 27px;height: 27px;display: inline-block;vertical-align: text-bottom;background: url(../images/ico-sidebar.png);margin-right: 10px;}
+main .hotEvaluation .fr ul {height: 299px;padding: 10px 0;border: 1px solid #eae9e9;}
+main .hotEvaluation .fr ul li {padding: 0 20px;line-height: 29px;height: 29px;border-bottom: 1px dotted #999;color: #666;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+main .hotEvaluation .fr ul li a {color: #666;}
+main .hotEvaluation .list {width: 968px;padding: 0;}
+main .hotEvaluation .list .title3 {font-family: "microsoft YaHei";font-weight: bold;border-bottom: 1px solid #be1f2d;background: url(../images/ico-line.png) no-repeat left center;line-height: 38px;font-size: 18px;color: #4b4b4c;text-indent: 10px;}
+main .hotEvaluation .list ul {margin-top: 25px;overflow: hidden;}
+main .hotEvaluation .list ul li {width: 177px;margin-right: 20px;float: left;line-height: 24px;}
+main .hotEvaluation .list ul li img {width: 175px;height: 175px;padding: 18px 0;border: 1px solid #eae9e9;margin-bottom: 16px;}
+main .hotEvaluation .list ul li p {font-size: 14px;color: #333;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+main .hotEvaluation .list ul li span {font-size: 14px;color: #666;display: block;}
+main .hotEvaluation .list ul li i {margin-right: 2px;display: inline-block;vertical-align: text-bottom;width: 12px;height: 12px;background: url(../images/star2.png);}
+/* 更多精彩 */
+main .wonderful .title1 {margin-bottom: 25px;}
+main .wonderful ul {overflow: hidden;}
+main .wonderful ul li {position: relative;color: #4b4b4c;font-size: 14px;text-align: center;float: left;width: 95px;margin: 0 19px 35px;}
+main .wonderful ul li a {display: block;padding-top: 110px;}
+main .wonderful ul li img {position: absolute;width: 95px;height: 95px;top: 0;left: 0;}
+main .wonderful ul li img.upper {width: 95px;left: 0;}
+main .wonderful ul li img.lower {width: 0;left: 50%;}
 
+/* 返回顶层 */
+.hm-t-go-top {position: fixed;right: 2px;bottom: 2px;z-index: 99998;cursor: pointer;width: 40px;
+height: 37px!important;text-align: center;white-space: normal;font-size: 14px;line-height: 17px;padding-top: 3px;color: #fff;background: url(../images/top.png) no-repeat -42px center #666;display: none;}
 /* 基本介绍 */
 .synopsis{background: #464646;color: #fff;overflow: hidden;margin-top: 48px;border: 1px solid;}
 .synopsis dl {width: 14%;float: left;padding: 36px 0;margin: 0 3%;}

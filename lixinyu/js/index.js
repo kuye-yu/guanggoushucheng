@@ -164,6 +164,7 @@ class Render{
         }
         this.dom3.innerHTML = str;
     }
+    // 新书上架轮播
     lunbo(){
         this.imgList=document.querySelectorAll(".newBook .new .list .bookList ul li");
         this.width = this.imgList[0].clientWidth;
@@ -207,67 +208,159 @@ new Render({
     url:"http://localhost/lixinyu/json/hot.json",
     
 })
+// 推荐图书右侧tab切换效果
+class RightTab{
+    constructor(options){
+        this.dom1 = options.dom1;
+        this.dom2 = options.dom2;
+        this.url = options.url;
+        this.load();
+    }
+    load(){
+        var that = this;
+        ajaxGet(this.url,function(res){
+            that.res = JSON.parse(res);
+            that.id = "menu31";
+            that.display();
+            // 3.渲染页面
+            for(let i = 0; i < that.dom1.length; i++){
+                that.dom1[i].onmouseover = function(){
+                    that.id = this.getAttribute("index");
+                    console.log(that.id);
+                    that.display();
+                }
+            }
+        })  
+    }
+    display(){
+        // var that = this;
+        var str = "";
+        var m = 1;
+        for(let i = 0; i < this.res.length; i++){
+                if(this.id == this.res[i].id){
+                    str += `
+                        <li>
+                            <i class="top">${m}</i>
+                            <a href="#" target="_blank">${this.res[i].name}</a>
+                        </li>
+                    `
+                    m++;
+                }
+        }
+        this.dom2.innerHTML = str;
+        // tab栏变色显示和隐藏效果
+        $(".column .ranking .rankingNav ul li a").hover(function(){
+            var index = $(this).parent().index();
+            $(this).parent().addClass("cur").siblings().removeClass("cur");
+            $(this).parents(".rankingNav").siblings(".list").children("ul").stop(true).eq(index).fadeIn().siblings().hide();
+        },function(){});
+    }
+}
+new RightTab({
+    dom1:document.querySelectorAll(".column .ranking .rankingNav ul li a"),
+    dom2:document.querySelector(".column .ranking .list ul"),
+    url:"http://localhost/lixinyu/json/tab.json"
+})
 
+// 推荐图书左侧tab切换效果
+class LeftTab{
+    constructor(options){
+        this.dom1 = options.dom1;
+        this.dom2 = options.dom2;
+        this.url = options.url;
+        this.load();
+    }
+    load(){
+        var that = this;
+        ajaxGet(this.url,function(res){
+            that.res = JSON.parse(res);
+            // that.id = 1;
+            // that.display();
+            // 3.渲染页面
+            for(let i = 0; i < that.dom1.length; i++){
+                // that.display();
+                that.dom1[i].onmouseover = function(){
+                    that.id = this.getAttribute("index");
+                    // console.log(that.id);
+                    that.display();
+                }
+            }
+        })  
+    }
+    display(){
+        // var that = this;
+        var str = "";
+        var num = parseInt(Math.random() * (this.res.length-6));
+        for(let i = num; i < num + 6; i++){
+            str += `
+                    <li index="${this.id}">
+                        <a href="#" target="_blank">
+                            <img src="${this.res[i].img}" alt="${this.res[i].bookName}" width="120" height="120">
+                        </a>
+                        <p><a href="#" target="_blank">${this.res[i].bookName}</a></p>
+                        <del>原价:￥${this.res[i].original}</del>				             	
+                        <span class="priceValue">￥${this.res[i].present}</span>				             	
+                    </li>
+                 `;
+        this.dom2.innerHTML = str;
+        // tab栏变色显示和隐藏效果
+        $(".column .leftColumn .sidebarNav ul li").hover(function(){
+            var index = $(this).index();
+            $(this).addClass("cur").siblings().removeClass("cur");
+           $(this).parents(".sidebarNav").siblings(".list").children("ul").stop(true).eq(index).fadeIn().siblings().hide();
+        },function(){});
+    }
+    }
+}
+new LeftTab({
+    dom1:document.querySelectorAll(".column .leftColumn .sidebarNav ul li"),
+    dom2:document.querySelector(".column .leftColumn .list ul"),
+    url:"http://localhost/lixinyu/json/hot.json"
+})
 
-// $(".column .leftColumn .sidebarNav ul li a").hover(function(){
-// 	var index = $(this).parent().index();
-// 	$(this).parent().addClass("cur").siblings().removeClass("cur");
-// 	$(this).parents(".sidebarNav").siblings(".list").children("ul").stop(true).eq(index).fadeIn().siblings().hide();
-// },function(){})
+// 更多精彩动画
+$(".wonderful ul li").hover(function(){
+	$(this).find("img.upper").stop(true).animate({"width":"0","left":"50%"},200);
+	$(this).find("img.lower").delay(200).animate({"width":"95px","left":"0"},200);
+},function(){
+	$(this).find("img.lower").stop(true).animate({"width":"0","left":"50%"},200);
+	$(this).find("img.upper").delay(200).animate({"width":"95px","left":"0"},200);
+})
 
-// // tab切换效果
-// class Tab{
-//     constructor(options){
-//         this.dom1 = options.dom1;
-//         console.log(this.dom1);
-//         this.dom2 = options.dom2;
-//         this.url = options.url;
-//         this.load();
-//     }
-//     load(){
-//         var that = this;
-//         ajaxGet(this.url,function(res){
-//             that.res = JSON.parse(res);
-//             // 3.渲染页面
-//             for(let j = 0; j < that.dom1.length; j++){
-//                 that.display();
-//                 that.dom1[j].onmouseover = function(){
-//                     that.display();
-//                 }
-//             }
-//         })  
-//     }
-//     display(){
-//         var that = this;
-//         var str = "";
-//         var m = 1;
-//         for(let i = 0; i < that.res.length; i++){
-//                 if(that.dom1[j].getAttribute("id") == that.res[i].id){
-//                     console.log(that.res[i]);
-//                 str += `
-//                         <li>
-//                             <i class="top">${m}</i>
-//                             <a href="#" target="_blank">${that.res[i].name}</a>
-//                         </li>
-//                 `
-//                 m++;
-//             }
-//         }
-//         that.dom2.innerHTML = str;
-//         // tab栏变色显示和隐藏效果
-//         $(".column .ranking .rankingNav ul li a").hover(function(){
-//             var index = $(this).parent().index();
-//             $(this).parent().addClass("cur").siblings().removeClass("cur");
-//             $(this).parents(".rankingNav").siblings(".list").children("ul").stop(true).eq(index).fadeIn().siblings().hide();
-//         },function(){});
-//                 console.log(that.dom2);
-//             }
-//         }
-// new Tab({
-//     dom1:document.querySelectorAll(".column .ranking .rankingNav ul li a"),
-//     dom2:document.querySelector(".column .ranking .list ul"),
-//     url:"http://localhost/lixinyu/json/tab.json"
+// 楼层效果
+$(function() {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 50) {
+        $(".hm-t-go-top ").fadeIn(200);
+      } else {
+        $(".hm-t-go-top ").fadeOut(200);
+      }
+    });
+    $(".hm-t-go-top ").hover(function(){
+        $(".hm-t-go-top ").css({"backgroundImage":"none"}).html("返回顶部");
+        //当点击跳转链接后，回到页面顶部位置
+        $(this).click(function() {
+            $('body,html').animate({
+            scrollTop: 0
+            },
+            500);
+            return false;
+        });
+    },function(){
+
+    })
+});
+
+// $(".hm-t-go-top").click(function(){
+//     var i = $(this).index();
+//     var now = $(".box").eq(i);
+//     var t = now.offset().top;
+//     $("html").animate({
+//         scrollTop:t
+//     })
 // })
+
+
 
 
 

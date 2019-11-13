@@ -174,7 +174,7 @@ class Details{
                             </div>
                             <div class="item-mc">
                                 <div class="book-detail-content">
-                                    <div style="text-indent:2rem">${this.res[j].synopsis}</div>
+                                    <p style="text-indent:2rem">${this.res[j].synopsis}</p>
                                 </div>
                             </div>
                         `    

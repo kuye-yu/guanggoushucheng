@@ -120,7 +120,6 @@ span.bds_more, .bds_tools a {display: block;font-family: 瀹嬩綋, Arial;height
 .item-mt h3 {float: left;color: #333;height: 24px;line-height: 24px;padding-left: 13px;padding-right: 30px;background: #e5e5e5 url(../images/mt-bg.jpg) right 0 no-repeat;font-size: 12px;}
 .item-mc {padding: 30px;}
 .book-detail-content {line-height: 24px;font-size: 14px;}
-.book-detail-content .paragraph p{text-indent:2rem}
 .detail-switch-list {width: 980px;margin-left: 8px;}
 .detail-switch-list .tt {font-size: 14px;border-bottom: 1px solid #333;height: 22px;line-height: 22px;margin-bottom: 20px;}
 .detail-switch-list .list {position: relative;}
