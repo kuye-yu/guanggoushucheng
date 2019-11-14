@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>首页</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<!-- 头部 -->
+	<header>
+	</header>
+	<!-- 导航栏 -->
+	<nav>
+	</nav>
+	<!-- 广告图 -->
+	<section class="banner container">
+		<div class="banner-c">
+			<a href="#"><img src="images/banner1.jpg" alt=""></a>
+			<a href="#"><img src="images/banner2.jpg" alt=""></a>
+			<a href="#"><img src="images/banner3.jpg" alt=""></a>
+		</div>
+		<div class="btns">
+			<input type="button" id="left" value="<">
+			<input type="button" id="right" value=">">
+		</div>
+		<div class="activityPic">
+			<div class="notice">
+				<span>书城公告</span>
+				<a href="#">更多&gt;</a>
+			</div>
+			<div class="notice-list">
+				<ul>
+					<li class="over"> <b></b><a href="#" title="2020年校园招聘">2020年校园招聘</a></li>
+					<li class="over"> <i>.</i><a href="#" title="广州购书中心招聘">广州购书中心招聘</a></li>
+				</ul>
+			</div>
+			<div class="customer_service">
+				<a target="_blank" href="#">
+					<img border="0" src="images/QQtalk1.png" alt="点击这里给我发消息" title="点击这里给我发消息">
+				</a>
+				&nbsp; 客服
+			</div>
+			<img src="images/QQtalk1.png"> 400-886-4208<br>
+			<img src="images/QQtalk3.png"> 服务时间：9:00-20:30
+			<img src="images/saohei.jpg">
+		</div>
+	</section>
+
+	<!-- 主体部分 -->
+
+	<main class="container">
+
+		<!-- 广购储值卡 -->
+		<section class="custom">
+			<div class="title">
+				<span>广购储值卡</span>
+			</div>
+			<div class="list">
+	   			<ul>
+					<li>
+						<a target="_blank" href="#" title=" 50元GG充值卡--请单独下单，注意:不参与任何优惠（不能使用券，此商品为虚拟商品）">
+						 	<img src="images/main1.jpg" alt=" 50元GG充值卡--请单独下单，注意:不参与任何优惠（不能使用券，此商品为虚拟商品） " title=" 50元GG充值卡--请单独下单，注意:不参与任何优惠（不能使用券，此商品为虚拟商品） ">
+						</a>
+						<p><a target="_blank" href="#"> 50元GG充值卡--请单独下单，注意:不参与任何优惠（不能使用券，此商品为虚拟商品）</a></p>
+						<span><font>￥50.00</font></span>
+					</li>
+					<li>
+						<a target="_blank" href="#" title=" 100元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，实体卡不包邮）)">
+						 <img src="images/main2.jpg" alt=" 100元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，实体卡不包邮）)" title=" 100元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，实体卡不包邮）)">
+						</a>
+						<p><a target="_blank" href="#"> 100元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，实体卡不包邮）)</a></p>
+						<span><font>￥100.00</font></span>
+					</li>
+					<li>
+						<a target="_blank" href="#" title=" 200元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，本卡为虚拟商品) ">
+						 <img src="images/main3.jpg" alt=" 200元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，本卡为虚拟商品) " title=" 200元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，本卡为虚拟商品) ">
+						</a>
+						<p><a target="_blank" href="#"> 200元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，本卡为虚拟商品) </a></p>
+						<span><font>￥200.00</font></span>
+					</li>
+					<li>
+						<a target="_blank" href="#" title=" 500元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，本卡为虚拟商品） ">
+						 	<img src="images/main4.jpg" alt=" 500元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，本卡为虚拟商品） " title=" 500元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，本卡为虚拟商品） ">
+						</a>
+						<p><a target="_blank" href="#"> 500元GG充值卡(请单独下单，注意:不参与任何优惠（不能使用券，本卡为虚拟商品） </a></p>
+						<span><font>￥500.00</font></span>
+					</li>
+					<li>
+						<a target="_blank" href="#" title=" 1000元GG充值卡(请单独下单,注意:不参与任何优惠（不能使用券，本卡为虚拟商品）)">
+						 	<img src="images/main5.jpg" alt=" 1000元GG充值卡(请单独下单,注意:不参与任何优惠（不能使用券，本卡为虚拟商品）)" title=" 1000元GG充值卡(请单独下单,注意:不参与任何优惠（不能使用券，本卡为虚拟商品）)">
+						</a>
+						<p><a target="_blank" href="#"> 1000元GG充值卡(请单独下单,注意:不参与任何优惠（不能使用券，本卡为虚拟商品）)</a></p>
+						<span><font>￥1000.00</font></span>
+					</li>
+	   			</ul>
+			</div>	
+		</section>
+		<!-- 专题推荐 -->
+		<section class="dishes">
+			<div class="title">
+				<span>专题推荐</span>
+			</div>
+			<div class="dishes_list">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="images/main6.jpg" alt="我心归处是敦煌">
+						</a>
+						<i>我心归处是敦煌</i>
+						<span> </span>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- 热卖图书 -->
+		<section class="hot">
+			<div class="title">
+				<span>热卖图书</span>
+			</div>
+			<div class="list">
+		  		<ul>
+					<!-- <li>
+						<a target="_blank" href="#" title="挑战(精)">
+							 <img src="images/main7.jpg" alt="挑战(精)" title="挑战(精)">
+						</a>
+						<p><a target="_blank" href="#">挑战(精)</a></p>
+						<del>原价：￥55.00</del>
+						<span><font>￥37.40</font></span>				             		
+					</li>-->
+					
+				</ul>
+			</div>	
+		</section>
+		<!-- 新书上架 -->
+		<section class="newBook container">
+			<div class="title title1">新书上架</div>
+				<div class="new">
+					<div class="list">
+						<div class="bookList">
+							<ul>
+								<!-- <li>
+									<a target="_blank" href="/#" title="焦虑你好:抗焦虑完全手册">
+										<img src="images/main17.jpg" alt="" title="焦虑你好:抗焦虑完全手册">
+									</a>
+									<p><a target="_blank" href="/#">焦虑你好:抗焦虑完全手册</a></p>
+									<del>原价：￥45.00</del>
+									<span><font>￥34.70</font></span>				           
+								</li>-->
+							</ul>
+						</div>
+						<i class="left"></i>
+						<i class="right"></i>
+					</div>
+				</div>
+		</section>
+		<!-- 每周推荐 -->
+		<section class="promo container clear">
+			<div class="list fl">
+				<div class="title title1">每日推荐</div>
+					<ul>
+					<!-- <li>
+						<a target="_blank" href="/#" title="焦虑你好:抗焦虑完全手册">
+							<img src="images/main17.jpg" alt="" title="焦虑你好:抗焦虑完全手册">
+						</a>
+						<p><a target="_blank" href="/#">焦虑你好:抗焦虑完全手册</a></p>
+						<del>原价：￥45.00</del>
+						<span><font>￥34.70</font></span>				           
+					</li>-->
+					</ul>
+				</div>
+			</div>
+			<div class="fr limit">
+				<div class="title title1"><i></i>限时抢购</div>
+			</div>
+		</section>
+
+		<!-- 推荐图书 -->
+		<section class="column contaier clear">
+			<div class="leftColumn purple fl">
+				<h6>推荐图书</h6>
+				<div class="sidebarNav">
+					<ul>
+						<li index="1" class="cur" ><a href="javascript:;">文学社科</a><b></b></li>
+						<li index="2"><a href="javascript:;">文教少儿</a><b></b></li>
+						<li index="3"><a href="javascript:;">精彩生活</a><b></b></li>
+						<li index="4"><a href="javascript:;">科学技术</a><b></b></li>
+						<li index="5"><a href="javascript:;">音乐影视</a><b></b></li>
+					</ul>
+				</div>
+				<div class="list">
+					<ul>
+				 		<!-- <li>
+							<a href="#" target="_blank">
+								<img src="/upload/601/603/50000/6788893_30230210_pic180_8458.jpg" alt="挚野(2)(完结篇)" width="120" height="120">
+							</a>
+					  		<p><a href="/Product.do?id=6788893" target="_blank">挚野(2)(完结篇)</a></p>
+							<del>原价:￥39.80</del>				             	
+						   	<span class="priceValue">￥28.30</span>				             	
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="ranking fr">
+					<div class="rankingNav">
+						<div class="title2">
+							<a class="fr" href="#">更多&gt;</a><i></i>7日畅销榜
+						</div>
+						<ul>
+						<li class="cur"><a href="#" class="current" index="Menu31" title="经管">经管</a></li>
+						<li><a href="#" index="Menu32" title="社科">社科</a></li>
+						<li><a href="#" index="Menu33" title="文学">文学</a></li>
+						<li><a href="#" index="Menu34" title="少儿">少儿</a></li>
+						<li><a href="#" index="Menu35" title="生活">生活</a></li>
+						</ul>
+					</div>
+					<div class="list">
+						<ul>
+							<!-- <li>
+								<i class="top">1</i>
+								<a href="#" target="_blank">见识:你最终能走多远取决于见识(精)</a>
+							</li>
+							<li>
+								<i class="top">2</i>
+								<a href="#" target="_blank">薛兆丰经济学讲义(市场版)</a>
+							</li>
+							   <li>
+								<i class="top">3</i>
+								<a href="#" target="_blank">陈志武金融通识课:金融其实很简单</a>
+							</li>
+							   <li>
+								<i>4</i>
+								<a href="#" target="_blank">活法</a>
+							</li>
+							<li>
+								<i>5</i>
+								<a href="#" target="_blank">深度管理</a>
+							</li>
+							   <li>
+								<i>6</i>
+								<a href="#" target="_blank">大破局:中国经济新机遇</a>
+							</li>
+							   <li>
+								<i>7</i>
+								<a href="#" target="_blank">合伙人制度:有效激励而不失控制权是怎样实现的(精)</a>
+							</li>
+							   <li>
+								<i>8</i>
+								<a href="#" target="_blank">高情商领导力</a>
+							</li>
+							   <li>
+								<i>9</i>
+								<a href="#" target="_blank">财务自由之路(2)--3年内让你的个人资产翻一番</a>
+							</li>
+							   <li>
+								<i>10</i>
+								<a href="#" target="_blank">粤港澳大湾区规划和全球定位</a>
+							</li>
+							   <li>
+								<i>11</i>
+								<a href="#" target="_blank">高效能人士的七个习惯(钻石版)</a>
+							</li> -->
+						   </ul>
+					</div>
+			</div>
+		</section>
+		<!-- 热评商品 -->
+		<section class="hotEvaluation container">
+			<div class="fr limit">
+				<div class="title2">
+					<a href="#" class="more">更多&gt;</a><i></i>出版社一览
+				</div>
+				<ul>
+					<li>
+					   <a href="#">·人民卫生出版社</a>
+					</li>
+					<li>
+					   <a href="#">·机械工业出版社</a>
+					</li>
+					<li>
+					   <a href="#">·中信出版社</a>
+					</li>
+					<li>
+					   <a href="#">·高等教育出版社</a>
+					</li>
+					<li>
+					   <a href="#">·人民教育出版社</a>
+					</li>
+					<li>
+					   <a href="#">·三联书店</a>
+					</li>
+					<li>
+					   <a href="#">·人民出版社</a>
+					</li>
+					<li>
+					   <a href="#">·清华大学出版社</a>
+					</li>
+					<li>
+					   <a href="#">·电子工业出版社</a>
+					</li>
+					<li style="border-bottom: 0px none;">
+					   <a href="#">·化学工业出版社</a>
+					</li>
+				</ul>
+			</div>
+			<div class="list">
+				<div class="title3">热评商品</div>
+				<ul>
+					<li>
+						<a href="#" target="_blank">
+							<img src="images/little.jpg" alt="我辈孤雏（精）">
+						</a>
+						<p>
+							<a href="#" target="_blank" title="我辈孤雏（精）">我辈孤雏（精）</a>
+					 	</p>
+						<span>评论数量：</span>
+						<span>顾客评分：
+						   <i></i><i></i><i></i><i></i><i></i>
+					  	</span>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/main28.png" alt="艾约堡秘史"></a>
+						<p><a href="#" target="_blank" title="艾约堡秘史">艾约堡秘史</a>
+					 	</p>
+		 				<span>评论数量：</span>
+						<span>顾客评分：
+						   <i></i><i></i><i></i><i></i><i></i>
+					  	</span>
+					</li>
+					<li>
+					  	<a href="#" target="_blank"><img src="images/main27.jpg" alt="猎物人:物质文明简史(新周刊出品)"></a>
+						<p>
+					 		<a href="#" target="_blank" title="半小时漫画世界史">猎物人:物质文明简史(新周刊出品)</a>
+					 	</p>
+		 				<span>评论数量：</span>
+						<span>顾客评分：
+						   <i></i><i></i><i></i><i></i><i></i>
+					  	</span>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="images/main25.jpg" alt="沈从文的前半生:1902-1948(精)"></a>
+						<p>
+					 		<a href="#" target="_blank" title="清单人生"> 沈从文的前半生:1902-1948(精)</a>
+					 	</p>
+		 				<span>评论数量：</span>
+						<span>顾客评分：
+						   <i></i><i></i><i></i><i></i><i></i>
+					  	</span>
+					</li>
+					<li style="margin-right: 0px;">
+					  	<a href="#" target="_blank"><img src="images/main26.jpg" alt="早上九点叫醒我(精)）"></a>
+						<p><a href="#" target="_blank" title="早上九点叫醒我(精)）">早上九点叫醒我(精)）</a></p>
+						 <span>评论数量：</span>
+						 <span>顾客评分：<i></i><i></i><i></i><i></i><i></i></span>
+					</li>
+				</ul>
+			</div>
+			 <div class="clear"></div>
+		</section>
+		<!-- 更多精彩 -->
+		<section class="wonderful container">
+			<div class="title1">更多精彩</div>
+			<ul>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/1-1.png">
+						<img class="lower" src="images/1-2.png">小说店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/2-1.png">
+						<img class="lower" src="images/2-2.png">历史店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/3-1.png">
+						<img class="lower" src="images/3-2.png">
+						传记店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/4-1.png">
+						<img class="lower" src="images/4-2.png">经济店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/5-1.png">
+						<img class="lower" src="images/5-2.png">
+						管理
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/6-1.png">
+						<img class="lower" src="images/6-2.png">
+						医学店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/7-1.png">
+						<img class="lower" src="images/7-2.png">
+						生活店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/8-1.png">
+						<img class="lower" src="images/8-2.png">
+						艺术店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/9-1.png">
+						<img class="lower" src="images/9-2.png">
+						动漫店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/10-1.png">
+						<img class="lower" src="images/10-2.png">
+						教辅店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/11-1.png">
+						<img class="lower" src="images/11-2.png">
+						少儿店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/12-1.png">
+						<img class="lower" src="images/12-2.png">
+							广州出版社
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/13-1.png">
+						<img class="lower" src="images/13-2.png">
+						外语店
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/14-1.png">
+						<img class="lower" src="images/14-2.png">
+						科技馆
+					</a>      
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/15-1.png">
+						<img class="lower" src="images/15-2.png">
+						原版外文
+						</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="upper" src="images/16-1.png">
+						<img class="lower" src="images/16-2.png">
+						影音
+					</a>      
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<!-- 返回顶层按钮 -->
+	<section id="hm_t_undefined" class="hm-t-container">
+		<div class="hm-t-go-top"></div>
+	</section>
+	<!-- 基本介绍 -->
+	<section class="synopsis">
+		
+	</section>
+	
+	<!-- 尾部 -->
+	<footer id="footer">
+	</footer>
+</body>
+<!-- <script src="public/require.js"></script> -->
+<script src="public/jquery.js"></script>
+<script src="public/ajax.js"></script>
+<script src="public/jquery.banner.1.2.js"></script>
+<script src="public/animate.js"></script>
+<!-- <script src="js/discoloration.js"></script> -->
+<script src="js/index.js"></script>
+
+</html>
