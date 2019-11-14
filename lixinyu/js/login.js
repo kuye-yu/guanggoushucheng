@@ -1,27 +1,3 @@
-// 用户登录
-// $(function(){
-//     this.loginId= $("#loginId");
-//         this.pwd = $("#password");
-//     $("input[type=submit]").on("click",function(){
-        
-//         var that = this;
-//         this.loginId.on("blur", function(){
-//             if($(this).val() == null || $(this).val() == "" || $(this).val() == "用户名或Email帐号"){
-//                 alert("请输入用户名,然后再登陆");
-//                 $(this).focus();
-//                 return false;
-//               }
-//         })
-//         this.pwd
-//     if(pwd.val() == null||pwd.val() == ""){
-//     alert("请输入密码,然后再登陆");
-//     pwd.focus();
-//     return false;
-//     }
-//     return true;
-//     })
-// })
-
 class LoginSubmit{
     constructor(){
         this.loginId= $("#loginId");
@@ -85,6 +61,10 @@ class LoginSubmit{
         })
     }
 }
+
+
+
+
 new LoginSubmit();
 
 

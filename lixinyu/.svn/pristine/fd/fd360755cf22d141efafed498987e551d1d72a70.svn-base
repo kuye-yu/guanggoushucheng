@@ -1,12 +1,3 @@
-// 引入头部
-$("header").load("http://localhost/lixinyu/data.html .top,.bottom")
-// 引入导航栏
-$("nav").load("http://localhost/lixinyu/data.html .nav")
-// 引入基本介绍
-$(".synopsis").load("http://localhost/lixinyu/data.html .product")
-// 引入尾部
-$("footer").load("http://localhost/lixinyu/data.html .myfooter")
-
 //  头部 收购商城 登录 注册 企业官网 订单...悬浮变色效果
 $("a").hover(function(){
     $(this).addClass("selected");
@@ -360,12 +351,15 @@ $(function() {
     })
 });
 
-
-// require(["public/jquery","public/ajax","public/jquery.banner.1.2","public/animate","js/discoloration"],function(a,b,c,d,dis){
-//     new Discoloration({
-//         a:$(".a")
-//     });
+// $(".hm-t-go-top").click(function(){
+//     var i = $(this).index();
+//     var now = $(".box").eq(i);
+//     var t = now.offset().top;
+//     $("html").animate({
+//         scrollTop:t
+//     })
 // })
+
 
 
 
