@@ -107,7 +107,7 @@ main .column .leftColumn.purple .sidebarNav ul li {background: #7a5ba5;}
 main .column .leftColumn.purple .sidebarNav ul li.cur {background: #5f3d8e;}
 main .column .leftColumn .sidebarNav ul li a {color: #fff!important;display: block;}
 main .column .leftColumn .list {margin-left: 180px;width: 788px;height: 544px;overflow: hidden;padding: 0;}
-main .column .leftColumn .list ul {overflow: hidden;display: none;}
+main .column .leftColumn .list ul {overflow: hidden;}
 main .column .leftColumn .list ul li {float: left;margin-top: 20px;margin-left: 18px;width: 155px;padding: 0 10px;height: 250px;border: 1px solid #eae9e9;margin-right: 0;}
 main .column .leftColumn .list ul li p {font-size: 14px;color: #333;line-height: 24px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;-o-text-overflow: ellipsis;}
 main .column .leftColumn .list ul li span {font-size: 16px;color: #e62129;line-height: 22px;}

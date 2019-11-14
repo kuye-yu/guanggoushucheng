@@ -27,13 +27,11 @@ class List{
             str += `<li class='bookli' index="${this.res[i].id}">
                         <div class="li-img fl">
                             <a href="details.html" target="_blank">
-                                <img id="imgbox_6526395" src="${this.res[i].img}" alt="暂无图片" title="${this.res[i].name}"/>
+                                <img class="imgbox" data-src="${this.res[i].img}" alt="暂无图片" title="${this.res[i].name}"/>
                             </a>
                         </div>
-                        <img class="icon1111" src="${this.res[i].img}" />
                         <div class="li-con fl" index="${this.res[i].id}">
                             <h2>
-                                <img class="icon1111" src="${this.res[i].img}" /> 
                                 <a href="details.html" title="${this.res[i].name}" target="_blank">
                                     <strong> ${this.res[i].name}）</strong>
                                 </a>
@@ -88,6 +86,11 @@ class List{
                     </li>`;
         }
         this.dom.innerHTML = str;
+        this.imgs = document.querySelectorAll(".imgbox");
+        console.log(this.imgs);
+        this.clientH = document.documentElement.clientHeight;
+        this.scrollT = document.documentElement.scrollTop;
+        this.lazy();
     }
     addEvent(){
         var that = this;
@@ -99,6 +102,7 @@ class List{
     setLocalStorage(eve){
         // 判定点击的是详情页还是购物车
         if(eve.target.className == "b_1 selected"){
+            confirm("添加购物车否？");
             this.goods = JSON.parse (localStorage.getItem("goods"))? JSON.parse (localStorage.getItem("goods")) : [];
             if(this.goods.length == 0){
                 this.goods.push({
@@ -140,6 +144,31 @@ class List{
             localStorage.setItem("details",JSON.stringify(this.details));
         }
     }
+    // 执行加载
+    lazy(){
+        var that = this;
+        var arr = [];
+		for(var i=0;i<this.imgs.length;i++){
+            arr.push(this.imgs[i]);
+        }
+
+        function lazyLoad(elements,cH,sT){
+            for(var i=0;i < arr.length;i++){
+                if(arr[i].offsetParent.offsetTop < cH + sT){
+                    arr[i].src = arr[i].getAttribute("data-src");
+                    arr.splice(i,1);
+                    i--;
+                }
+            }
+        }	
+		lazyLoad(this.imgs,this.clientH,this.scrollT);
+		window.onscroll = function(){
+            var scrollT = document.documentElement.scrollTop;
+			lazyLoad(that.imgs,that.clientH,scrollT);
+        }
+    }
+    // 懒加载
+  
 }
 new List({
     dom:document.querySelector(".rightCon .proList ul.list"),

@@ -18,7 +18,7 @@ $("main .list li img").hover(function(){
     $(this).css("border", "1px solid #eae9e9");
 })
 
-// 热卖图书和新品图书渲染页面
+// 热卖图书和新品图书推荐渲染页面
 class Render{
     constructor(options){
         this.dom1 = options.dom1;
@@ -68,7 +68,7 @@ class Render{
             $(this).css("border", "1px solid #eae9e9");
         })
     }
-    // 新品图书渲染页面
+    // 新品上架渲染页面
     displayNewBook(){
         var str = "";
         var num = parseInt(Math.random() * (this.res.length-8));
@@ -83,8 +83,20 @@ class Render{
                             <span><font>￥${this.res[j].present}</font></span>				   
                         </li>
                   `
-            }
-        this.dom2.innerHTML = str + str;
+        }
+        for(let j= num;j < num + 6;j++){
+            str += `
+                    <li>
+                        <a target="_blank" href="/#" title="${this.res[j].bookName}">
+                            <img src="${this.res[j].img}" alt="" title="${this.res[j].bookName}">
+                        </a>
+                        <p><a target="_blank"href="/#">${this.res[j].bookName}</a></p>
+                        <del>原价：￥${this.res[j].original}</del>
+                        <span><font>￥${this.res[j].present}</font></span>				   
+                    </li>
+              `
+    }
+        this.dom2.innerHTML = str;
         this.lunbo();
     }
     // 每周推荐渲染页面
@@ -107,7 +119,7 @@ class Render{
     }
     // 新书上架轮播
     lunbo(){
-        this.imgList=document.querySelectorAll(".newBook .new .list .bookList ul li");
+        this.imgList = document.querySelectorAll(".newBook .new .list .bookList ul li");
         this.width = this.imgList[0].clientWidth;
         this.idx = 0;
         this.right();
@@ -118,7 +130,7 @@ class Render{
         this.rightBtn.onclick = function(){
             that.idx++;
             animate(that.train,{left:-that.idx * that.width}, 1000, function(){
-               if(that.idx >= that.imgList.length){
+               if(that.idx >= that.imgList.length-6){
                     that.idx = 0;
                    that.train.style.left = 0;
                } 
@@ -134,7 +146,7 @@ class Render{
             that.idx--;
             // 判定信号量是否小于0 如果小于0 就瞬间切换到最后一张"猫腻"图
             if (that.idx < 0) {
-                that.idx = that.imgList.length - 4;
+                that.idx = that.imgList.length - 6;
                 that.train.style.left = -that.idx * that.width + "px";
                 that.idx--; 
             }
@@ -161,7 +173,7 @@ class RightTab{
         var that = this;
         ajaxGet(this.url,function(res){
             that.res = JSON.parse(res);
-            that.id = "menu31";
+            that.id = "Menu31";
             that.display();
             // 3.渲染页面
             for(let i = 0; i < that.dom1.length; i++){
@@ -215,11 +227,11 @@ class LeftTab{
         var that = this;
         ajaxGet(this.url,function(res){
             that.res = JSON.parse(res);
-            // that.id = 1;
-            // that.display();
+            that.id = 1;
+            that.display();
             // 3.渲染页面
             for(let i = 0; i < that.dom1.length; i++){
-                // that.display();
+                that.display();
                 that.dom1[i].onmouseover = function(){
                     that.id = this.getAttribute("index");
                     // console.log(that.id);
