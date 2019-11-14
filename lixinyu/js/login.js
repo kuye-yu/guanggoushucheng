@@ -18,7 +18,7 @@ class LoginSubmit{
                 that.information = JSON.parse(getCookie("information")) ? JSON.parse(getCookie("information")) : [];
                 for(let i = 0; i < that.information.length; i++){
                     if(that.loginId.val() == that.information[i].phone && that.pwd.val() == that.information[i].pass){
-                        alert("登录成功");
+                        window.location.pathname = "/lixinyu/index.html";
                         that.loginId.val("");
                         that.pwd.val("");
                         return

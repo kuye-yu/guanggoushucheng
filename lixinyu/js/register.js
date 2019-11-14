@@ -9,12 +9,13 @@ class Logon{
         this.emailMsg = options.emailMsg;
         this.pwdMsg = options.pwdMsg;
         this.pwd1Msg = options.pwd1Msg;
-        this.arr = JSON.parse(getCookie("information"))? JSON.parse(getCookie("information")):[]
+        this.arr = getCookie("information")? JSON.parse(getCookie("information")):[]
         this.flag = false;
         this.init();
         this.bindEvent();
     }
     bindEvent(){
+        
         var that = this;
         this.registerBtn.onclick = function(){
             console.log(that.flag);
@@ -52,6 +53,9 @@ class Logon{
     judgeEavil(){
         var reg =  /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
        var that = this;
+       this.email.onfocus = function(){
+
+       }
        this.email.onblur = function(){
             if(reg.test(this.value)){
                 that.emailMsg.innerHTML = "请继续";
@@ -62,11 +66,13 @@ class Logon{
                 that.emailMsg.innerHTML = "Email不正确，请换另外一个！";
             }
         }
+        
     }
     // 2,判断密码
     judgePass(){
         var reg =  /\w{6,12}/;
        var that = this;
+       this.pass1.onfocus = function(){}
        this.pass1.onblur = function(){
             if(reg.test(this.value)){
                 that.pwdMsg.innerHTML = "密码格式正确，请继续！";
@@ -83,6 +89,7 @@ class Logon{
     //3 确认密码
     judgePassIf(){
         var that = this;
+        this.pass2.onfocus = function(){}
         this.pass2.onblur = function(){
             if(this.value === that.pass1.value){
                 that.pwd1Msg.innerHTML = "两次输入的密码相同，请继续！";
@@ -97,6 +104,7 @@ class Logon{
     judgePhone(){
         var reg =  /[0-9]{11}/;
        var that = this;
+       this.phone.onfocus = function(){}
        this.phone.onblur = function(){
             if(reg.test(this.value)){
                 that.flag = true;

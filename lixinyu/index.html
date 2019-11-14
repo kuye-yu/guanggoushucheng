@@ -496,7 +496,20 @@
 <script src="public/ajax.js"></script>
 <script src="public/jquery.banner.1.2.js"></script>
 <script src="public/animate.js"></script>
-<!-- <script src="js/discoloration.js"></script> -->
 <script src="js/index.js"></script>
+<script src="js/discoloration.js"></script>
+<script>
+	// 引入头部
+	$("header").load("http://localhost/lixinyu/data.html .top,.bottom")
+	// 引入导航栏
+	$("nav").load("http://localhost/lixinyu/data.html .nav")
+	// 引入基本介绍
+	$(".synopsis").load("http://localhost/lixinyu/data.html .product")
+	// 引入尾部
+	$("footer").load("http://localhost/lixinyu/data.html .myfooter")
+	$.getScript("js/discoloration.js", function(){
+		console.log("页面加载完成");
+	})
 
+</script>
 </html>

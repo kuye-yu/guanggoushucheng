@@ -1,11 +1,4 @@
-// 引入头部
-$("header").load("http://localhost/lixinyu/data.html .top,.bottom");
-// 引入导航栏
-$("nav").load("http://localhost/lixinyu/data.html .nav");
-// 引入基本介绍
-$(".synopsis").load("http://localhost/lixinyu/data.html .product");
-// 引入尾部
-$("footer").load("http://localhost/lixinyu/data.html .myfooter");
+
 
 class Details{
     constructor(options){
@@ -15,6 +8,34 @@ class Details{
         this.bottomPosition = options.bottomPosition;
         // 读取到所有商品数据
         this.load();
+        this.addEvent();
+    }
+    addEvent(){
+        var that = this;
+        this.headPosition.onclick = function(eve){
+            that.goods = JSON.parse(localStorage.getItem("goods"))? JSON.parse (localStorage.getItem("goods")) : [];
+            if(that.goods.length == 0){
+                that.goods.push({
+                    id:that.id,
+                    num:1
+                })
+            }else{
+                var onoff = true;
+                for(var i = 0; i < that.goods.length; i++){
+                    if(that.goods[i].id === that.id){
+                        that.goods[i].num++;
+                        onoff = false;
+                    }
+                }
+            if(onoff){
+                that.goods.push({
+                    id:that.id,
+                    num:1
+                })
+            }
+        }
+        localStorage.setItem("goods",JSON.stringify(that.goods));
+        }
     }
     // 读取所有数据方法
     load(){
@@ -40,6 +61,7 @@ class Details{
             for(var j = 0;j< this.res.length;j++){
                 // 判断二者id是否相同
                 if(this.res[j].id == this.details[i].id){
+                    this.id = this.details[i].id;
                     // 计算差价
                    this.difference = this.res[j].price - this.res[j].present;
                    // 渲染页面
@@ -163,7 +185,7 @@ class Details{
                                                             <input id="amount" name="jianshu" type="hidden" value="1">
                                                         </dt>
                                                         <dd>
-                                                            <a href="#" class="addShop_btn">&nbsp;&nbsp;加入购物车</a>
+                                                            <a href="javascript:;" class="addShop_btn">&nbsp;&nbsp;加入购物车</a>
                                                             <input type="submit" value="立刻购买" class="buy_btn">
                                                         </dd>
                                                     </dl>
