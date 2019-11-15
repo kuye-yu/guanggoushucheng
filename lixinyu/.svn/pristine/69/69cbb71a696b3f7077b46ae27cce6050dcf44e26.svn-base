@@ -260,10 +260,7 @@
        </div>
         <div class="clear"></div>
     </section>
-    <!-- 返回顶层按钮 -->
-	<section id="hm_t_undefined" class="hm-t-container">
-		<div class="hm-t-go-top"></div>
-	</section>
+    
     <!-- 基本介绍 -->
 	<section class="synopsis">
 		

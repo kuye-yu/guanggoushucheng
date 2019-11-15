@@ -41,4 +41,4 @@ function animate(dom, cssObj, duration, callback) {
         }
         return dom.currentStyle[cssProp];
     }
-}
+};

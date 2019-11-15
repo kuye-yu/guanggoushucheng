@@ -386,3 +386,21 @@ span.bds_more, .bds_tools a {
 
 /* 基本介绍 */
 /* 尾部 */
+
+/* 返回顶层 */
+.hm-t-go-top {
+  position: fixed;
+  right: 2px;
+  bottom: 2px;
+  z-index: 99998;
+  cursor: pointer;
+  width: 40px;
+  height: 37px!important;
+  text-align: center;
+  white-space: normal;
+  font-size: 14px;
+  line-height: 17px;
+  padding-top: 3px;
+  color: #fff;
+  background: url(../images/top.png) no-repeat -42px center #666;
+  display: none;}

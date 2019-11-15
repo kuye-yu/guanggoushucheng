@@ -245,6 +245,7 @@
 <!-- <script src="public/cookie.js"></script> -->
 <script src="public/ajax.js"></script>
 <script src="js/shopping.js"></script>
+<script src="js/discoloration.js"></script>
 <script>
 	// 引入尾部
 	$("footer").load("http://localhost/lixinyu/data.html .myfooter")

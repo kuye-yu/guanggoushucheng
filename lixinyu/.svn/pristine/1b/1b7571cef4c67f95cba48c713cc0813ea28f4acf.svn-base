@@ -98,11 +98,6 @@ class Render{
     }
         this.dom2.innerHTML = str;
         this.lunbo();
-        // require(["js/banner","public/animate"],function(lunbo,animate){
-        //     new lunbo({
-        //         imgList:document.querySelectorAll(".newBook .new .list .bookList ul li")
-        //     });
-        // })
     }
     // 每周推荐渲染页面
     displayPromo(){
@@ -284,3 +279,27 @@ $(".wonderful ul li").hover(function(){
 	$(this).find("img.lower").stop(true).animate({"width":"0","left":"50%"},200);
 	$(this).find("img.upper").delay(200).animate({"width":"95px","left":"0"},200);
 })
+
+// 楼层效果
+$(function() {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 50) {
+        $(".hm-t-go-top ").fadeIn(200);
+      } else {
+        $(".hm-t-go-top ").fadeOut(200);
+      }
+    });
+    $(".hm-t-go-top ").hover(function(){
+        $(".hm-t-go-top ").css({"backgroundImage":"none"}).html("返回顶部");
+        //当点击跳转链接后，回到页面顶部位置
+        $(this).click(function() {
+            $('body,html').animate({
+            scrollTop: 0
+            },
+            500);
+            return false;
+        });
+    },function(){
+
+    })
+});

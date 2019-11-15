@@ -236,12 +236,8 @@
 				</div>
 			</form>
 		</div>
-	</section>
+    </section>
 
-	<!-- 返回顶层按钮 -->
-	<section id="hm_t_undefined" class="hm-t-container">
-		<div class="hm-t-go-top"></div>
-	</section>
     <!-- 基本介绍 -->
 	<section class="synopsis">
 	</section>
@@ -254,6 +250,7 @@
 <script src="public/ajax.js"></script>
 <script src="public/jquery.banner.1.2.js"></script>
 <script src="js/list.js"></script>
+<script src="js/discoloration.js"></script>
 <script>
 	// 引入头部
 	$("header").load("http://localhost/lixinyu/data.html .top,.bottom")

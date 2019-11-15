@@ -56,7 +56,9 @@ border-radius: 3px;font-size: 14px;display: inline-block;text-align: center;}
 .rightCon .li-con dd .b_1 {background: #e62129 url(../images/cart_ico.png) 17px center no-repeat;color: #fff!important;border: 1px solid #e62129;}
 .rightCon .li-con dd .b_2 {background: #fff url(../images/shc_ico.png) 17px center no-repeat;color: #a3a3a3;border: 1px solid #a3a3a3;}
 
-
+/* 返回顶层 */
+.hm-t-go-top {position: fixed;right: 2px;bottom: 2px;z-index: 99998;cursor: pointer;width: 40px;
+    height: 37px!important;text-align: center;white-space: normal;font-size: 14px;line-height: 17px;padding-top: 3px;color: #fff;background: url(../images/top.png) no-repeat -42px center #666;display: none;}
 /* 基本介绍 */
 
 

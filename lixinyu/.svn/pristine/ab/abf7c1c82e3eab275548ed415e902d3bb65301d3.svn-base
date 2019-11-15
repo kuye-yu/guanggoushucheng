@@ -9,7 +9,6 @@ class Logon{
         this.emailMsg = options.emailMsg;
         this.pwdMsg = options.pwdMsg;
         this.pwd1Msg = options.pwd1Msg;
-        this.protocal = options.protocol;
         this.arr = getCookie("information")? JSON.parse(getCookie("information")):[]
         this.flag = false;
         this.init();
@@ -30,8 +29,6 @@ class Logon{
                 that.arr.push(that.obj);
                 console.log(that.arr);
                 that.arr1 = JSON.stringify(that.arr);
-                confirm("确定注册？");
-                window.location.pathname = "/lixinyu/login.html";
                 setCookie("information",that.arr1,{
                     expires:100,
                     path:"/"

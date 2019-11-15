@@ -497,6 +497,7 @@
 <script src="public/jquery.banner.1.2.js"></script>
 <script src="public/animate.js"></script>
 <script src="js/index.js"></script>
+<script src="js/discoloration.js"></script>
 <script>
 	// 引入头部
 	$("header").load("http://localhost/lixinyu/data.html .top,.bottom")
